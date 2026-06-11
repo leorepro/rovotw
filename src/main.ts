@@ -190,6 +190,56 @@ function initPromptTabs(): void {
   )
 }
 
+// ---------- 捲動進場動畫 ----------
+function initReveal(): void {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+  const targets = document.querySelectorAll(
+    [
+      '.section-heading',
+      '.media-row',
+      '.feature-card',
+      '.challenge',
+      '.compare',
+      '.video-card',
+      '.event-card',
+      '.subscribe-box',
+      '.prompt-tab-list',
+      '.prompt-blocks',
+      '.carousel',
+      '.feature-figure',
+      '.centered-copy',
+      '.contact-grid > *',
+      '.course .media-row-media',
+      '.course .media-row-copy',
+    ].join(','),
+  )
+
+  // 同一容器內的兄弟元素做 60ms 階梯延遲
+  const groups = new Map<Element, number>()
+  targets.forEach((el) => {
+    const parent = el.parentElement!
+    const idx = groups.get(parent) ?? 0
+    groups.set(parent, idx + 1)
+    ;(el as HTMLElement).style.transitionDelay = `${Math.min(idx, 5) * 60}ms`
+    el.classList.add('reveal')
+  })
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal-in')
+          io.unobserve(e.target)
+        }
+      })
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+  )
+  targets.forEach((el) => io.observe(el))
+}
+
+initReveal()
 initNav()
 initFaq()
 initCarousel()
