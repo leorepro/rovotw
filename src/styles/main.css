@@ -245,7 +245,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* Hero（置中式） */
-.hero { padding: 72px 0 64px; }
+.hero { padding: 72px 0 0; }
+.events { padding-top: 48px; }
 .hero-center { text-align: center; }
 .tagline {
   font-family: var(--font-head);
@@ -371,6 +372,22 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0 0 14px;
 }
 .feature-card ul { margin: 0; }
+.feature-card p { margin: 0; }
+
+/* 卡片彩色圖示 chip */
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px; height: 54px;
+  border-radius: 14px;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+.card-icon--blue   { background: #e2edff; }
+.card-icon--green  { background: #e9f5d8; }
+.card-icon--purple { background: #f4e8fd; }
+.connect-summary { margin-top: 40px; font-size: var(--fs-lg); }
 
 /* 影片區（四段色帶） */
 .videos-band .media-row { margin-bottom: 64px; }
@@ -483,14 +500,79 @@ img { max-width: 100%; height: auto; display: block; }
 .carousel-thumbs button img { width: 100%; height: 100%; object-fit: cover; }
 .carousel-thumbs button.active { border-color: var(--blue); opacity: 1; }
 
+/* 活潑圖文列（白框傾斜，沿用影片區語彙） */
+.lively .media-row-media img {
+  border: 10px solid #fff;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+  transform: rotate(-1.4deg);
+  transition: transform .3s ease;
+}
+.lively .media-row.reverse .media-row-media img { transform: rotate(1.4deg); }
+.lively .media-row:hover .media-row-media img { transform: rotate(0deg); }
+.lively .content-heading { text-align: center; }
+.lively .step-chip { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22); }
+
 /* ============ Section 10：Teamwork Graph ============ */
 .teamwork { padding-top: 0; }
 .teamwork-banner img { width: 100%; }
 .teamwork .container { padding-top: 40px; }
 .content-heading.center { text-align: center; }
 
-/* ============ Section 11：對比 ============ */
+/* 四元素彩色膠囊章（Teamwork Graph 區） */
+.tg-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 24px 0;
+}
+.tg-chip {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 48px;
+  font-weight: 700;
+  color: var(--ink);
+  transform: rotate(-2deg);
+  transition: transform .2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.tg-chip:nth-child(even) { transform: rotate(2deg); }
+.tg-chip:hover { transform: rotate(0deg) scale(1.08); }
+.tg-chip--blue   { background: #dcebff; }
+.tg-chip--green  { background: #e4f3cf; }
+.tg-chip--yellow { background: #fdf0c2; }
+.tg-chip--purple { background: #f1e3fd; }
+
+/* ============ Section 11：對比（Before / After） ============ */
+.compare-grid { position: relative; }
+.compare-grid::after {
+  content: '→';
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 44px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+.compare { text-align: center; }
+.ba-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 48px;
+  font-family: var(--font-head);
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.ba-badge--before { background: rgba(0, 0, 0, 0.3); color: rgba(255, 255, 255, 0.85); }
+.ba-badge--after  { background: #fff; color: var(--blue); }
 .compare img { border-radius: 6px; background: #fff; }
+.compare--before img { filter: grayscale(.85); opacity: .92; }
+.compare--after img { box-shadow: 0 0 0 4px #fff, 0 16px 36px rgba(0, 0, 0, 0.25); }
 .compare-caption {
   text-align: center;
   color: #fff;
@@ -644,6 +726,66 @@ img { max-width: 100%; height: auto; display: block; }
 .course-desc { font-size: var(--fs-lg); color: var(--body); margin: 0 0 28px; }
 .course-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .course .media-row-media img { box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12); }
+
+/* 學員回饋便利貼牆 */
+.quote-wall { margin-top: 72px; }
+.quote-heading {
+  font-family: var(--font-head);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  text-align: center;
+  color: var(--ink);
+  margin: 0 0 32px;
+}
+.quote-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.quote-card {
+  flex: 1 1 190px;
+  max-width: 230px;
+  margin: 0;
+  padding: 22px 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  animation: doodle-float 5.5s ease-in-out infinite;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.quote-card:nth-child(odd)  { rotate: -1.6deg; }
+.quote-card:nth-child(even) { rotate: 1.6deg; }
+.quote-card:nth-child(2) { animation-delay: .9s; }
+.quote-card:nth-child(3) { animation-delay: 1.8s; }
+.quote-card:nth-child(4) { animation-delay: 2.7s; }
+.quote-card:nth-child(5) { animation-delay: 3.6s; }
+.quote-card:hover {
+  rotate: 0deg;
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.16);
+  animation-play-state: paused;
+}
+.quote-card blockquote {
+  margin: 0 0 14px;
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: #2c2c2c;
+}
+.quote-card blockquote::before { content: '「'; }
+.quote-card blockquote::after  { content: '」'; }
+.quote-card figcaption {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--ink);
+}
+.quote-card--blue   { background: #dcebff; }
+.quote-card--green  { background: #e4f3cf; }
+.quote-card--yellow { background: #fdf0c2; }
+.quote-card--purple { background: #f1e3fd; }
+.quote-card--pink   { background: #ffe3ec; }
+@media (prefers-reduced-motion: reduce) {
+  .quote-card { animation: none; }
+}
 
 /* ============ Section 16：聯絡表單 ============ */
 .contact-grid {
@@ -873,6 +1015,7 @@ img { max-width: 100%; height: auto; display: block; }
   .contact-map iframe { height: 240px; }
   .prompt-block { padding: 24px 20px; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .compare-grid::after { content: '↓'; top: 50%; }
 
   .carousel-thumbs button { width: 64px; height: 42px; }
 }
