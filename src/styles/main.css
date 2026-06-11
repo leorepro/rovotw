@@ -31,6 +31,13 @@
 
 * { box-sizing: border-box; }
 
+/* 多行標題均衡斷行，避免最後一行只剩一個字 */
+h1, h2, h3, h4,
+.section-heading, .content-heading, .card-heading, .heading-major,
+.video-title, .features-heading, .quote-heading, .dodont-title {
+  text-wrap: balance;
+}
+
 html { scroll-behavior: smooth; }
 
 body {
