@@ -1,0 +1,503 @@
+/* ============================================================
+   Atlassian Rovo — 新加坡商鈦坦科技
+   設計參數取自原站（rovo.titansoft.com.sg）的 computed styles
+   ============================================================ */
+
+:root {
+  --blue: #1c4bd6;          /* 主藍（深） */
+  --blue-bright: #2e73f0;   /* 聯絡區藍 */
+  --gray-bg: #f6f6f6;       /* 淺灰區塊底色 */
+  --ink: #1b1b1b;           /* 主要深色文字 */
+  --ink-dark: #151515;
+  --body: #5e5e5e;          /* 內文灰 */
+  --rule: rgba(0, 0, 0, 0.18);
+  --rule-light: rgba(255, 255, 255, 0.55);
+  --font-logo: 'Cabin', arial, sans-serif;
+  --font-head: 'Work Sans', sans-serif;
+  --font-body: 'Noto Sans', Arial, sans-serif;
+  --container: 1112px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- 通用文字樣式 ---------- */
+.section { padding: 40px 0; }
+.section--light { background: #fff; }
+.section--gray  { background: var(--gray-bg); }
+.section--blue  { background: var(--blue); color: #fff; }
+.section--contact { background: var(--blue-bright); color: #fff; padding-bottom: 56px; }
+
+.section-heading {
+  font-family: var(--font-head);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+.section--blue .section-heading,
+.section--contact .section-heading { color: #fff; }
+
+.heading-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0 0 40px;
+}
+.section--blue .heading-rule,
+.section--contact .heading-rule { border-top-color: var(--rule-light); }
+
+.content-heading {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 16px;
+}
+.minor-heading {
+  font-family: var(--font-body);
+  font-size: 19px;
+  font-weight: 700;
+  margin: 24px 0 12px;
+}
+.card-heading {
+  font-family: var(--font-body);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 22px;
+}
+
+.rich { font-size: 16px; line-height: 1.5; }
+.rich p { margin: 0 0 12px; }
+.rich ul, .rich ol { margin: 0 0 16px; padding-left: 22px; }
+.rich li { margin-bottom: 10px; }
+.rich ul ul { margin-top: 8px; margin-bottom: 0; }
+.section--light .rich, .section--gray .rich { color: var(--body); }
+.section--light .rich strong, .section--gray .rich strong { color: #3d3d3d; }
+
+.center { text-align: center; }
+.centered-copy { max-width: 760px; margin: 0 auto; }
+.centered-copy.narrow { max-width: 680px; }
+.centered-copy ul { display: table; margin-left: auto; margin-right: auto; }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 56px;
+}
+
+/* ---------- 按鈕 ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 48px;
+  padding: 15px 40px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: filter .15s ease;
+}
+.btn:hover { filter: brightness(.94); }
+.btn--blue  { background: var(--blue); color: #fff; }
+.btn--white { background: #fff; color: #303030; }
+
+/* ============ Section 0：公告列 / Header / Hero ============ */
+.announcement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 9px 16px;
+}
+.announcement:hover span { text-decoration: underline; }
+.sprig.flip { transform: scaleX(-1); }
+
+.site-header { padding: 34px 24px 10px; text-align: center; }
+.logo {
+  font-family: var(--font-logo);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.hero { padding: 40px 0 64px; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 48px;
+}
+.tagline {
+  font-family: var(--font-head);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 36px;
+}
+.hero-sub { font-size: 19px; margin: 0 0 8px; color: var(--ink); }
+.hero-sub.muted { color: var(--body); font-size: 18px; }
+.hero-media img { width: min(641px, 100%); margin-left: auto; }
+
+/* ============ Section 1：最新活動資訊 ============ */
+.events-track {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+.events-track::-webkit-scrollbar { display: none; }
+.event-card {
+  flex: 0 0 374px;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.event-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.events-dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
+.events-dots button {
+  width: 22px; height: 3px;
+  border: none; border-radius: 2px;
+  background: #d4d4d4;
+  cursor: pointer;
+  padding: 0;
+}
+.events-dots button.active { background: #555; }
+
+/* ============ 卡片網格（挑戰 / Do-Don't） ============ */
+.card-grid { row-gap: 48px; }
+.challenge ul { color: #fff; }
+
+/* ============ 圖文列（media rows） ============ */
+.media-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 56px;
+}
+.media-row:last-child { margin-bottom: 0; }
+.media-row.reverse .media-row-media { order: 2; }
+.media-row.reverse .media-row-copy  { order: 1; }
+.media-row-media img { border-radius: 10px; width: 100%; }
+
+.section--blue .media-row-copy { color: #fff; }
+.section--blue .content-heading { color: #fff; text-align: center; }
+.section--blue .rich strong { color: #fff; }
+
+.section--light .media-row .content-heading { text-align: left; }
+
+/* 影片區 */
+.videos .media-row { margin-bottom: 64px; }
+.video-embed { position: relative; aspect-ratio: 16 / 9; }
+.video-embed iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0; border-radius: 10px;
+  background: #000;
+}
+
+/* ============ Section 6：Logo 牆 ============ */
+.logo-wall {
+  height: 300px;
+  background-image: url('../assets/logo-wall.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* ============ Section 7：AI 老師 ============ */
+.feature-figure { margin: 0; }
+.feature-figure img {
+  width: 100%;
+  border-radius: 10px;
+}
+.feature-figure figcaption {
+  margin-top: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* ============ Section 8：輪播 ============ */
+.carousel-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #fff;
+}
+.carousel-track {
+  display: flex;
+  transition: transform .45s ease;
+}
+.carousel-slide { flex: 0 0 100%; }
+.carousel-slide img { width: 100%; object-fit: contain; }
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 38px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255, 255, 255, 0.85);
+  color: #444;
+  border: none;
+  cursor: pointer;
+}
+.carousel-arrow.prev { left: 0; border-radius: 0 4px 4px 0; }
+.carousel-arrow.next { right: 0; border-radius: 4px 0 0 4px; }
+.carousel-arrow:hover { background: #fff; }
+.carousel-caption {
+  position: absolute;
+  right: 0; bottom: 14px;
+  z-index: 2;
+  background: rgba(40, 40, 40, 0.75);
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 14px;
+}
+.carousel-thumbs { display: flex; gap: 8px; margin-top: 12px; }
+.carousel-thumbs button {
+  width: 96px; height: 62px;
+  padding: 0;
+  border: 2px solid transparent;
+  background: #fff;
+  cursor: pointer;
+  opacity: .75;
+}
+.carousel-thumbs button img { width: 100%; height: 100%; object-fit: cover; }
+.carousel-thumbs button.active { border-color: var(--blue); opacity: 1; }
+
+/* ============ Section 10：Teamwork Graph ============ */
+.teamwork { padding-top: 0; }
+.teamwork-banner img { width: 100%; }
+.teamwork .container { padding-top: 40px; }
+.content-heading.center { text-align: center; }
+
+/* ============ Section 11：對比 ============ */
+.compare img { border-radius: 6px; background: #fff; }
+.compare-caption {
+  text-align: center;
+  color: #fff;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+/* ============ Section 12：提示詞 ============ */
+.prompt-blocks { max-width: 720px; margin: 0 auto; }
+.prompt-block { margin-bottom: 40px; }
+.prompt-block:last-child { margin-bottom: 0; }
+.prompt-block .content-heading { text-align: left; color: var(--ink); }
+
+/* ============ Section 14：FAQ ============ */
+.faq-intro { color: var(--body); margin: -16px 0 32px; }
+.faq-intro a { color: var(--blue); }
+.faq { max-width: 720px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid rgba(0, 0, 0, 0.16); }
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 22px;
+  color: var(--ink-dark);
+  text-align: left;
+  padding: 22px 4px;
+}
+.faq-icon { flex: 0 0 auto; transition: transform .25s ease; color: #444; }
+.faq-item.open .faq-icon { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+  color: var(--body);
+}
+.faq-item.open .faq-answer { max-height: 800px; }
+.faq-answer ul, .faq-answer ol { padding-right: 8px; }
+
+/* ============ Section 15：課程 CTA ============ */
+.course .media-row { margin-bottom: 0; }
+.course-eyebrow { font-size: 32px; color: #000; margin: 0 0 4px; }
+.heading-major {
+  font-family: var(--font-head);
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 18px;
+}
+.course-desc { font-size: 20px; color: var(--body); margin: 0 0 28px; }
+
+/* ============ Section 16：聯絡表單 ============ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.contact-form .content-heading { color: #fff; font-weight: 700; text-align: left; }
+.field { position: relative; margin-bottom: 18px; }
+.field input,
+.field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  padding: 24px 14px 10px;
+  resize: vertical;
+}
+.field label {
+  position: absolute;
+  left: 14px; top: 17px;
+  color: #767676;
+  pointer-events: none;
+  transition: all .15s ease;
+}
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
+  top: 6px;
+  font-size: 11px;
+  color: #555;
+}
+.attach-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0 26px;
+  font-size: 15px;
+}
+.attach-link { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
+.attach-count { font-size: 13px; opacity: .9; }
+.contact-form .btn { width: 100%; font-size: 16px; }
+.contact-info p { margin: 0 0 18px; }
+.contact-info a { color: #fff; text-decoration: none; }
+.contact-info a:hover { text-decoration: underline; }
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 430px;
+  border: 0;
+}
+
+/* ============ Section 17：參考影片 ============ */
+.video-cards { align-items: start; }
+.video-title {
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--ink);
+  margin: 24px 0 14px;
+}
+.video-desc { text-align: center; color: var(--body); margin: 0; }
+
+/* ============ Footer ============ */
+.site-footer { padding: 48px 24px 56px; text-align: center; }
+.copyright { color: #3d3d3d; margin: 0 0 30px; }
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 28px;
+  margin-bottom: 34px;
+}
+.footer-nav a {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.footer-nav a:hover { text-decoration: underline; }
+.footer-rule {
+  width: 56px;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 0 auto 26px;
+}
+.footer-brand { font-size: 14px; color: #3d3d3d; margin: 0; }
+
+/* ============================================================
+   RWD
+   ============================================================ */
+@media (max-width: 1023px) {
+  .logo { font-size: 34px; }
+  .tagline { font-size: 38px; }
+  .heading-major { font-size: 38px; }
+  .card-heading { font-size: 28px; }
+  .media-row { gap: 36px; }
+  .event-card { flex-basis: 320px; }
+}
+
+@media (max-width: 767px) {
+  .section { padding: 32px 0; }
+  .logo { font-size: 28px; }
+  .site-header { padding-top: 24px; }
+
+  .hero { padding: 24px 0 40px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-media { order: -1; }
+  .tagline { font-size: 32px; margin-bottom: 20px; }
+
+  .grid-2 { grid-template-columns: 1fr; gap: 36px; }
+
+  .media-row { grid-template-columns: 1fr; gap: 24px; margin-bottom: 44px; }
+  .media-row.reverse .media-row-media { order: 0; }
+  .media-row.reverse .media-row-copy  { order: 1; }
+
+  .event-card { flex-basis: 84%; }
+
+  .card-heading { font-size: 24px; }
+  .heading-major { font-size: 30px; }
+  .course-eyebrow { font-size: 24px; }
+  .faq-question { font-size: 18px; }
+  .logo-wall { height: 180px; background-size: contain; background-repeat: no-repeat; background-color: #fff; }
+
+  .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+  .map-embed iframe { height: 320px; }
+
+  .carousel-thumbs button { width: 64px; height: 42px; }
+}

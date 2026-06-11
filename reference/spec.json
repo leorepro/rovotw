@@ -1,0 +1,1072 @@
+[
+ {
+  "n": 0,
+  "nodes": [
+   {
+    "t": "a",
+    "href": "https://leorepro.github.io/atlassian-rovo-course/",
+    "ux": "Element",
+    "text": "最新免費 Atlassian Rovo 課程資訊",
+    "aid": ""
+   },
+   {
+    "t": "a",
+    "href": "/",
+    "ux": "Link",
+    "text": "Atlassian Rovo新加坡商鈦坦科技Atlassian Rovo 新加坡商鈦坦科技Atlassian Rovo 新加坡商鈦坦科技Atlassian Rovo 新加坡商鈦坦科技",
+    "aid": ""
+   },
+   {
+    "t": "a",
+    "href": "/",
+    "ux": "Link",
+    "text": "Atlassian Rovo新加坡商鈦坦科技Atlassian Rovo 新加坡商鈦坦科技Atlassian Rovo 新加坡商鈦坦科技Atlassian Rovo 新加坡商鈦坦科技",
+    "aid": ""
+   },
+   {
+    "t": "h",
+    "tag": "h1",
+    "ux": "Tagline",
+    "aid": "HEADER_TAGLINE_RENDERED",
+    "text": "Rovo 專為企業設計的AI"
+   },
+   {
+    "t": "img",
+    "src": "ChatGPT Image 2026年6月4日 下午01_19_27.png",
+    "alt": "",
+    "aid": "BACKGROUND_IMAGE_RENDERED"
+   }
+  ]
+ },
+ {
+  "n": 1,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "GALLERY_SECTION_TITLE_RENDERED",
+    "text": "最新活動資訊"
+   },
+   {
+    "t": "a",
+    "href": "https://www.youtube.com/watch?v=k7T8iFRZjDo",
+    "ux": "Element",
+    "text": "",
+    "imgs": [
+     "ChatGPT Image 2026年6月4日 下午01_07_56.png"
+    ],
+    "aid": ""
+   },
+   {
+    "t": "a",
+    "href": "https://www.atlassiantw.com/atlassian-team-26-recap-webinar",
+    "ux": "Element",
+    "text": "",
+    "imgs": [
+     "ChatGPT Image 2026年6月4日 下午12_56_24.png"
+    ],
+    "aid": ""
+   },
+   {
+    "t": "a",
+    "href": "http://twgcli.com",
+    "ux": "Element",
+    "text": "",
+    "imgs": [
+     "Discover the power of the Teamwork Graph.png"
+    ],
+    "aid": ""
+   },
+   {
+    "t": "a",
+    "href": "http://gotica.io/260416/M-EDM",
+    "ux": "Element",
+    "text": "",
+    "imgs": [
+     "從建設到價值.png"
+    ],
+    "aid": ""
+   },
+   {
+    "t": "a",
+    "href": "https://loom.tw/",
+    "ux": "Element",
+    "text": "",
+    "imgs": [
+     "20260318004128.png"
+    ],
+    "aid": ""
+   },
+   {
+    "t": "a",
+    "href": "https://docs.google.com/forms/d/1ekT1uTB18iuJvQeZ4JP5LPDY0uiurpzqWD0E7cMszAc/preview?edit_requested=true",
+    "ux": "Element",
+    "text": "",
+    "imgs": [
+     "3-260318 AI代理的知識營運系統的現在進行式 .png"
+    ],
+    "aid": ""
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTENT_SECTION_TITLE_RENDERED",
+    "text": "企業面臨的挑戰"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE1_RENDERED",
+    "text": "常見的 AI 工具沒有企業知識"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "常見的 AI 工具沒有企業知識"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "常見的 AI 工具沒有企業知識"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION1_RENDERED",
+    "html": "<p></p><ul> <li>許多 <strong>AI 工具</strong> 往往難以有效整合企業內部的知識和流程，導致無法提供貼合企業需求的分析和建議。然而 <strong>Atlassian Rovo AI</strong> 透過整合Jira 與Confluence 資訊，具有智慧搜尋與自動化知識管理，使AI 能夠理解企業內部資訊，提供精準實用的決策支援。</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE2_RENDERED",
+    "text": "找尋資料困難"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "常見的 AI 工具沒有企業知識"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "常見的 AI 工具沒有企業知識"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION2_RENDERED",
+    "html": "<p></p><ul> <li>超過 47% 的數位工作者曾因難以找到工作所需的資訊而陷入資訊孤島。透過 <strong>Atlassian Rovo AI</strong>，企業能夠打破資訊孤島，利用 AI 驅動的智慧搜尋與知識管理，快速獲取關鍵資訊，提升工作效率與團隊協作。</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE3_RENDERED",
+    "text": "與現有系統整合困難"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "工作效率下降和注意力分散"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "工作效率下降和注意力分散"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION3_RENDERED",
+    "html": "<p></p><ul> <li>將 <strong>AI 技術</strong> 整合到現有的 IT 基礎設施和業務流程中，可能會面臨資訊洩漏、合規性等挑戰。然而，<strong>Atlassian Rovo AI</strong> 採用企業級安全標準，確保資料隱私與合規性，同時提供智慧型知識管理，讓企業能夠在安全無虞的環境下高效運用 AI 驅動的技術。</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE4_RENDERED",
+    "text": "工作效率下降和注意力分散"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "工作效率下降和注意力分散"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "工作效率下降和注意力分散"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION4_RENDERED",
+    "html": "<p></p><ul> <li>數位工作者平均每天需要在 <strong>11 個應用程式</strong> 之間來回切換，以查找資料或完成工作任務，導致時間浪費與效率降低。<strong>Atlassian Rovo AI</strong> 透過智能搜尋與跨平台整合，讓使用者能夠在單一介面快速獲取所需資訊，減少切換成本，提升工作效率。</li> </ul>"
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTENT_SECTION_TITLE_RENDERED",
+    "text": "Rovo 是什麼？一款強大的 AI 助手提升團隊效率"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTENT_MEDIA_HEADLINE1_RENDERED",
+    "text": "​Atlassian 推出的 Rovo 是一款全新的產品，可提升團隊協作效率。"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_MEDIA_DESCRIPTION1_RENDERED",
+    "html": "<p><span><strong>Rovo</strong> 是一款由 Atlassian 推出的 <strong>生成式 AI 助手</strong>，旨在幫助企業和團隊<strong>高效搜尋資訊、分析數據並自動化工作流程</strong>，減少時間浪費，提升生產力。</span></p><p><span><br></span></p><div><h3><strong>Rovo 的主要功能</strong></h3> <h3><br></h3></div><p></p><ul> <li><strong>智能搜尋（Find）</strong> <ul> <li><strong>跨平台整合</strong>：支援 <strong>Jira、Confluence、Google Drive、Microsoft SharePoint</strong> 等工具，快速檢索相關資訊。</li> <li><strong>上下文理解</strong>：提供更準確的搜索結果，減少在不同應用間切換的需求。</li> </ul> </li> </ul><p><span><br></span></p><p></p><ul> <li><strong>AI 知識管理（Learn）</strong> <ul> <li><strong>自動解析與學習</strong>：透過 <strong>AI 生成見解、知識卡片</strong>，幫助團隊快速掌握關鍵資訊。</li> <li><strong>對話式探索</strong>：內建 AI 助手可回答問題、提供建議，優化知識管理。</li> </ul> </li> </ul><p><span><br></span></p><p></p><ul> <li><strong>自動執行（Act）</strong> <ul> <li><strong>AI 代理人（Agents）</strong>：自動執行 <strong>重複性工作、數據分析、內容整理</strong>，加快決策速度。</li> <li><strong>簡化工作流</strong>：讓團隊專注於創造性和策略性任務，提高整體生產力。</li> </ul> </li> </ul><p><span><br></span></p>"
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "VIDEO_SECTION_TITLE_RENDERED",
+    "text": "Rovo AI 實際執行範例"
+   },
+   {
+    "t": "iframe",
+    "src": "https://player.vimeo.com/video/1062835453?badge=0&byline=0&h=d28ab7a93b&portrait=0&title=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED0"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED0",
+    "text": "幫助你『直接獲得答案』，而不是另一個連結或檔案"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED0",
+    "html": "<p></p><ul> <li>透過 Rovo Bookmarks 搜尋書籤功能，企業與團隊可以善用 AI 驅動的搜尋優化，更高效地管理關鍵資訊，確保重要內容在搜尋結果中優先呈現。這不僅提升了搜尋體驗，也能大幅提高工作效率。</li> </ul>"
+   },
+   {
+    "t": "iframe",
+    "src": "https://player.vimeo.com/video/1062835892?badge=0&byline=0&h=4f6e5a5769&portrait=0&title=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED1"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED1",
+    "text": "像與人類交流一樣，讓 Rovo 協助創建內容"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED1",
+    "html": "<p></p><ul> <li>透過 <strong>Rovo Chat</strong>，企業可輕鬆管理內部知識，實現 AI 輔助的內容創建與資訊分析，加速團隊運作效率。如果您正在尋找高效的 AI 知識管理與創作工具，Rovo Chat 是最佳選擇！</li> </ul>"
+   },
+   {
+    "t": "iframe",
+    "src": "https://player.vimeo.com/video/1064546378?badge=0&byline=0&h=ffa08097f5&portrait=0&title=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED2"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED2",
+    "text": "Rovo 助團隊提升效率並降低專案風險"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED2",
+    "html": "<p></p><ul> <li>Rovo 整合 Atlassian 工具（如 Jira、Confluence）及其他 SaaS 應用，提供組織目標、知識、團隊與工作狀態的可視化視圖。透過即時追蹤進度與對話式互動，Rovo 協助團隊迅速掌握專案狀況並預測潛在風險。AI 分析大量數據，識別趨勢並優化決策，同時促進團隊協作，消除資訊孤島。Rovo AI 透過數據整合、任務自動化與風險預測，提升工作效率與專案成功率。</li> </ul>"
+   },
+   {
+    "t": "iframe",
+    "src": "https://player.vimeo.com/video/1063071963?badge=0&byline=0&h=c813cb7376&portrait=0&title=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED3"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED3",
+    "text": "Rovo協助撰寫產品驗收條件"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED3",
+    "html": "<p></p><ul> <li>Rovo 可協助補全遺漏的 <strong>Acceptance Criteria (AC)</strong>，透過分析現有的需求描述、使用者故事或相似案例，提供合理且具體的驗收標準。這不僅能確保開發團隊對需求有明確理解，還能減少溝通誤差，提高產品開發的一致性與品質。</li> </ul>"
+   },
+   {
+    "t": "iframe",
+    "src": "https://player.vimeo.com/video/1062840631?badge=0&byline=0&h=499bf2c525&portrait=0&title=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED4"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED4",
+    "text": "Rovo 和 GitHub Copilot 的協作助手來提高開發效率"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED4",
+    "html": "<p></p><ul> <li>透過 <strong>Rovo 外部連結搜尋</strong>，使開發人員能夠在既有工作流程中更流暢地存取Jira 或 Confluence 的任務資訊，實現更高效的軟體開發與協作體驗。</li> </ul>"
+   },
+   {
+    "t": "iframe",
+    "src": "https://player.vimeo.com/video/1064529031?badge=0&byline=0&h=25e459864e&portrait=0&title=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED5"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED5",
+    "text": "Rovo Agent 可提升團隊效率與客戶滿意度"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED5",
+    "html": "<p></p><ul> <li>Rovo Agent 能協助團隊快速應對各類挑戰。透過深入的資料分析，能有效總結並聚焦問題核心，協助團隊針對過往數據，逐條列出解決方案。Rovo 不僅能幫助團隊迅速找到正確的協助對象，還能高效回報問題解決進度，並向客戶提供完整的解決方案總結。</li> <li>使用 Rovo Agent，不僅能顯著縮短問題解決時間，還能減少潛在風險的發生，最終提升客戶對服務的滿意度與信任度。無論是提升內部協作效率或是增強客戶關係，Rovo Agent 都是您企業解決問題的得力助手。</li> </ul>"
+   },
+   {
+    "t": "iframe",
+    "src": "https://player.vimeo.com/video/1066316966?badge=0&byline=0&h=6afb532fea&portrait=0&title=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED6"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED6",
+    "text": "支援手機，Rovo Agent 無縫整合 Slack、Teams 與 JSM，自動回覆訊息、提升協作效率"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED6",
+    "html": "<p></p><ul> <li>透過 Rovo Agent，企業可將 Slack、Microsoft Teams 等常用通訊工具與 JSM (Jira Service Management) 無縫整合，讓Rovo Agent即時執行指令並回覆使用者訊息。這項串接不僅No code 且大幅提升回應速度，還能量化提問數據，並在事後進行問題回答品質分析，進一步優化服務管理。</li> </ul><p><span><br></span></p><p></p><ul> <li>無論是提升內部協作效率，還是加強客戶支援體驗，Rovo Agent 都是企業數位轉型的最佳選擇，助您更聰明、更高效地解決問題。</li> </ul>"
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTENT_SECTION_TITLE_RENDERED",
+    "text": "Rovo 搜尋連接外部產品：統一介面存取多平台資訊"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_MEDIA_DESCRIPTION1_RENDERED",
+    "html": "<p></p><ul> <li><strong>企業內部知識管理</strong>：統一檢索儲存於各平台的文件，減少時間浪費。</li> <li><strong>多專案團隊合作</strong>：避免重複輸入與資訊遺失，確保跨部門協作效率。</li> <li><strong>技術與客服支援</strong>：快速定位<strong>客戶查詢紀錄</strong>與<strong>技術文件</strong>，加快回應時間。</li> </ul><p><span><br></span></p><p><span>透過 <strong>Rovo 搜尋連接外部產品</strong>，企業與團隊能夠有效統合分散資訊，</span></p><p><span>提升檢索效率與決策精準度，實現更智慧的知識管理與協作體驗！</span></p>"
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "nodes": []
+ },
+ {
+  "n": 7,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "ABOUT_SECTION_TITLE_RENDERED",
+    "text": "在學習過程中，隨時有位 『AI 老師』在輔助你學習"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "ABOUT_DESCRIPTION_RENDERED0",
+    "html": "<p><span>Rovo 透過提供快速定義(Definition) 、在<strong>不離開當前工作環境</strong>的情況下，快速獲取專案相關術語、縮寫和公司特定語言，無縫融入你的工作流程中</span></p>"
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "GALLERY_SECTION_TITLE_RENDERED",
+    "text": "透過 Rovo Agent 虛擬隊友，可靈活應用既有組織知識。幫助你『降低人工時間』與『提升產出品質』"
+   },
+   {
+    "t": "btn",
+    "ux": "CarouselButtonPrevious",
+    "aid": "GALLERY_SCROLL_LEFT_ARROW",
+    "text": ""
+   },
+   {
+    "t": "btn",
+    "ux": "CarouselButtonNext",
+    "aid": "GALLERY_SCROLL_RIGHT_ARROW",
+    "text": ""
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": ""
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": ""
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "GALLERY_SLIDE_POSITION",
+    "html": "1/5"
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "ABOUT_HEADLINE_RENDERED0",
+    "text": "Rovo Agent 與 Automation 的結合應用"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "ABOUT_DESCRIPTION_RENDERED0",
+    "html": "<p></p><ul> <li><strong>資源管理自動化</strong>：優化人力與數據資源調度，確保項目順暢進行，減少手動操作錯誤。</li> <li><strong>流程與報告自動化</strong>：自動處理數據整理、報告生成與流程監控，提升工作效率與準確度。</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "ABOUT_HEADLINE_RENDERED1",
+    "text": "打造專屬的 Rovo Agent"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "ABOUT_DESCRIPTION_RENDERED1",
+    "html": "<p></p><ul> <li><strong>可控的知識範圍</strong>：AI 可只參考指定來源，確保資訊準確可靠。</li> <li><strong>個性化代理設定</strong>：根據需求打造專屬 AI 助理，提供符合企業需求的最佳回應。</li> <li><strong>提升決策效率</strong>：讓 AI 基於內部專屬知識運行，減少查找時間。</li> </ul>"
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTENT_SECTION_TITLE_RENDERED",
+    "text": "Rovo 精準回覆的底層秘密來自於Teamwork Graphic"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTENT_MEDIA_HEADLINE1_RENDERED",
+    "text": "Teamwork Graphic"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_MEDIA_DESCRIPTION1_RENDERED",
+    "html": "<p></p><ul> <li>Teamwork Graph 是 Atlassian 雲端平台的核心數據層，它專注於四個核心元素：<strong>團隊</strong>、<strong>工作內容</strong>、<strong>目標</strong>與<strong>知識 </strong>並從每次互動中自動學習 ，以提供越來越相關的個人化結果。此方法強調團隊合作，而非僅是搜尋最佳化，展現其在促進協作與工作流程方面的能力。</li> </ul>"
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTENT_SECTION_TITLE_RENDERED",
+    "text": "Rovo 透過 Teamwork Graphic 數據層，能更了解您的團隊與目標"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE1_RENDERED",
+    "text": "一般生成式AI 並不了解您的團隊"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "Teamwork Graphic了解您的團隊"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "Teamwork Graphic了解您的團隊"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION1_RENDERED",
+    "html": "<p><span>沒有 Teamwork Graphic 的 AI內容可能較為直線化</span></p><p><span>缺少對團隊合作結構理解能力。</span></p>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE2_RENDERED",
+    "text": "Teamwork Graphic了解您的團隊"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "Teamwork Graphic了解您的團隊"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "Teamwork Graphic了解您的團隊"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION2_RENDERED",
+    "html": "<p><span>Rovo 具備Teamwork Graphick的數據層，更理解您的團隊情況</span></p><p><span>回應可更偏向協作團隊工作的視角以及豐富的答案</span></p>"
+   }
+  ]
+ },
+ {
+  "n": 12,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTENT_SECTION_TITLE_RENDERED",
+    "text": "編寫 AI 提示詞的基礎元素"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTENT_HEADLINE1_RENDERED",
+    "text": "關鍵要素"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_DESCRIPTION1_RENDERED",
+    "html": "<p><span>優秀 AI 提示詞的關鍵要素提示中包含的元素和細節等級應該根據您希望 AI 執行的任務的複雜性進行自訂。如果您向 AI 提出一個簡單的問題，您可以使用與詢問同事時相同的自然語言來回答。而精心設計的生成式 AI 提示應包含以下元素：</span></p><p></p><ul> <li><strong>角色(Role)</strong>：定義人工智慧應該承擔的角色。</li> <li><strong>工作(Job)</strong>：明確說明您希望 AI 執行的任務。</li> <li><strong>背景(Context)</strong>：提供有用的背景資訊或上下文。</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTENT_HEADLINE2_RENDERED",
+    "text": "角色(Role)"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_DESCRIPTION2_RENDERED",
+    "html": "<p></p><ul> <li>角色定義了人工智慧在產生回應時應假設的視角或角色。這有助於人工智慧自訂其輸出以適應所需的上下文和語氣。</li> </ul><p><span><br></span></p><p></p><ul> <li>角色類型可以是具有以下特徵的人： 特定主題的專業知識（「擔任 Jira 報告專家。」） 獨特的觀點或意見（「作為 Confluence 管理員，解釋…」） 特定的職業（「擔任行銷分析師的角色。」） 您可以要求 AI 扮演多個角色（甚至是虛構的角色），以提供您所需的觀點和專業知識的理想組合。</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTENT_HEADLINE3_RENDERED",
+    "text": "工作(Job)"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_DESCRIPTION3_RENDERED",
+    "html": "<p></p><ul> <li>在這項工作中，您將使用動作動詞，例如「解釋」、「撰寫」、「分析」、「列舉」等，來清楚指示 AI 執行特定操作或提供所需資訊。</li> </ul><p><span><br></span></p><p></p><ul> <li>您的指示越具體，AI 生成的結果就會越精確。此外，為 AI 提供明確的規則或指南，有助於確保輸出內容符合您的期望，並減少後續修正的需求。這樣的寫法讓語句更流暢、專業，並強調了清楚指示對於獲得理想結果的重要性。若有其他細節想加入或強調，可以再調整內容！</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTENT_HEADLINE4_RENDERED",
+    "text": "背景(Context)"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_DESCRIPTION4_RENDERED",
+    "html": "<p></p><ul> <li>提供背景資訊有助於人工智慧理解與任務相關的背景或情境。這可能包括您為何需要這些資訊、涉及的對象，以及任何相關的背景細節。提供背景資訊能確保 AI 的回應更貼合您的特定需求與情境。背景資訊可能包括：</li> </ul><p><span><br></span></p><p></p><ol> <li>驅動此任務的背景或更大的整體情境</li> <li>輸出的目標受眾</li> <li>您提出要求的目的或意圖</li> <li>結果的預期用途</li> </ol>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTENT_HEADLINE5_RENDERED",
+    "text": "額外元素"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTENT_DESCRIPTION5_RENDERED",
+    "html": "<p></p><ul> <li>除了必要的組成要素外，還有一些可選元素可以提升 AI 提示的品質，從而改善 AI 的回應效果。這些元素並非每個提示都必須包含，但在特定情境下可能會很有幫助。</li> <li>根據您要求 AI 執行的任務類型與複雜程度，一個優質的提示可能包含以下額外元素：</li> </ul><p><span><br></span></p><p></p><ol> <li><strong>格式</strong>：指定輸出的預期格式。</li> <li><strong>語氣</strong>：定義 AI 回應的寫作風格或情緒基調。</li> <li><strong>來源</strong>：提及任何您希望 AI 參考的特定資料來源。</li> <li><strong>範例</strong>：提供良好的範例來引導 AI 產出符合需求的內容。</li> </ol>"
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTENT_SECTION_TITLE_RENDERED",
+    "text": "AI 提示詞撰寫最佳實踐指南"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE1_RENDERED",
+    "text": "✅ Do"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "❌ Don't"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "❌ Don't"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION1_RENDERED",
+    "html": "<p></p><ul> <li>✅ <strong>明確具體</strong>：確保提示內容清晰、不含模糊詞彙，讓 AI 能準確理解您的需求。</li> </ul><p><span><br></span></p><p></p><ul> <li>✅ <strong>簡潔且包含相關背景資訊</strong>：用簡單直接的語言表達，同時提供必要的背景資訊，幫助 AI 更精準回應</li> </ul><p><span><br></span></p><p></p><ul> <li>✅ <strong>使用自然語言</strong>：避免過於複雜或生硬的表達方式，讓 AI 更容易理解您的意圖</li> </ul><p><span><br></span></p><p></p><ul> <li>✅ <strong>拆解複雜任務</strong>：對於高度複雜的任務，將其分解為一系列較小的提示，以提升 AI 的處理效果</li> </ul><p><span><br></span></p><p></p><ul> <li>✅ <strong>驗證與測試 AI 結果</strong>：確保 AI 生成的內容符合需求，並進行必要的調整與修正</li> </ul><p><span><br></span></p><p></p><ul> <li>✅ <strong>使用後續提示進行優化</strong>：透過迭代與補充指令，持續優化 AI 的回應品質。</li> </ul>"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "CONTENT_HEADLINE2_RENDERED",
+    "text": "❌ Don't"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "❌ Don't"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "",
+    "text": "❌ Don't"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "CONTENT_DESCRIPTION2_RENDERED",
+    "html": "<p></p><ul> <li>❌ 避免使用模糊或不明確的指示 </li> </ul><p><span><br></span></p><p></p><ul> <li>❌ 不要在提示中加入過多不相關的資訊或細節，以免讓 AI 感到困惑。不要在提示中包含機密或專有資訊 </li> </ul><p><span><br></span></p><p></p><ul> <li>❌ 避免使用行話、首字母縮寫詞和複雜語言 </li> </ul><p><span><br></span></p><p></p><ul> <li>❌ 避免要求 AI 在單一提示中執行多項工作或非常複雜的工作 </li> </ul><p><span><br></span></p><p></p><ul> <li>❌ 不要盲目地認為輸出沒有錯誤 </li> </ul><p><span><br></span></p><p></p><ul> <li>❌ 如果結果不太正確，請不要重新開始新的提示</li> </ul>"
+   }
+  ]
+ },
+ {
+  "n": 14,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "FAQ_SECTION_TITLE_RENDERED",
+    "text": "常見問題"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_SECTION_DESCRIPTION_RENDERED",
+    "html": "<p><span>如果您找不到問題解答，請洽詢我們：<a href=\"mailto:sales@titansoft.com.sg\" target=\"_blank\">sales@titansoft.com.sg</a>。</span></p>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "與第三方產品的互通性"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_0",
+    "html": "<p></p><ul> <li>Rovo 包含可與第三方產品互通的功能。例如，您可以使用連接器將第三方產品連接至 Rovo。在連接第三方產品之前，我們建議您審查該產品所存儲的數據類型，並確認數據連接符合您的內部數據使用政策和實踐。</li> </ul><p><span><br></span></p><p></p><ul> <li>將 Rovo 連接至第三方產品可能會讓第三方獲取您選擇與其產品配合使用的信息，並且您對第三方產品的使用以及您分享的信息將受其條款和政策（包括其隱私政策）約束。例如，如果您使用 Atlassian Marketplace 購買的代理（Agent），則您對該代理的使用將受第三方條款和政策的約束。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "權限管理"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_1",
+    "html": "<p></p><ul> <li>Rovo 會同步來自連接的第三方產品和您的 Atlassian 產品的存取控制與權限設置，以確保使用者只能查看其有權存取的內容。</li> </ul><p><span><br></span></p><p></p><ul> <li>由於 Rovo 依賴您設定的這些權限，因此在連接第三方產品之前，您應該檢查並提醒使用者檢查該產品的權限設置。</li> </ul><p><span><br></span></p><p></p><ul> <li>例如，如果您將 Google Drive 連接至 Rovo，使用者需要登入並將其 Atlassian 帳戶連接至 Google Drive，才能在 Rovo 中查看任何 Google Drive 搜索結果。授權後，使用者將能夠查看其已擁有訪問權限的公開文件與私人文件。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "已刪除的數據"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_2",
+    "html": "<p></p><ul> <li>對於管理員管理的連接器，Rovo會「監聽」內容刪除事件，並相應更新 Rovo 索引。例如，一旦 Rovo 索引更新，從連接的第三方產品中刪除的內容將不再出現在 Rovo 結果中。<br> </li> <li>對於 Smart Link 連接器，已刪除內容的鏈接可能仍會顯示在搜索結果中。但是，如果使用者點擊已刪除內容的鏈接，或點擊其已無權訪問的鏈接，該鏈接將顯示為失效鏈接。<br> </li> <li>如果組織管理員將某個第三方產品與 Rovo 斷開連接，Rovo將在 30 天內刪除來自該第三方產品的已索引內容。然而，對於 GitHub 內容，刪除方式有所不同。由於 GitHub 數據是通過 <strong>GitHub for Jira 應用</strong>集成的，只有當您從 Rovo 斷開 GitHub 並卸載 GitHub for Jira 應用時，數據才會被刪除。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "數據使用"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_3",
+    "html": "<p></p><ul> <li>Rovo 會索引您所連接的第三方產品的整個工作區（例如整個 Google Drive 或 SharePoint 工作區）。目前，您無法進一步縮小索引範圍（例如僅索引 Google Drive 中的特定資料夾），但未來可能會考慮添加此功能。</li> </ul><p><span><br></span></p><p></p><ul> <li>為了提供 Rovo 服務，Rovo會存儲來自第三方產品的文件內容及相關的使用數據。Rovo還會存儲文件的權限設置，以確保只顯示使用者有權訪問的內容。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "SOC2 與 ISO27001"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_4",
+    "html": "<p></p><ul> <li>Rovo 和 Atlassian Intelligence 已通過 SOC 2 和 ISO 27001 外部評估與合規認證。未來，Rovo 和 Atlassian Intelligence 將作為 Atlassian 年度合規審計的一部分。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "大型語言模型（LLMs）"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_5",
+    "html": "<p></p><ul> <li>Rovo 使用 <strong>OpenAI LLMs</strong> 以及 Atlassian 自託管開源模型：<strong>Llama </strong>系列、<strong>Mixtral</strong> 等；第三方託管模型：<strong>OpenAI GPT</strong>、<strong>Anthropic Claude</strong>、<strong>Google Gemini </strong>等。</li> </ul><p><span><br></span></p><p></p><ul> <li>Rovo 使用的 LLM 供應商<strong>不會</strong>使用您的輸入和輸出來改進其服務。無論是 OpenAI 還是任何其他 LLM 供應商，都<strong>不會</strong>保留您的輸入和輸出數據。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "瀏覽器擴展"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_6",
+    "html": "<p></p><ul> <li>如果使用者有權安裝 Rovo 瀏覽器擴展，使用者可以在任何公開網頁（例如 Wikipedia）或任何通過連接器與 Rovo 連接的網頁（例如 SharePoint）上使用 <strong>Rovo Chat 和代理（Agent）</strong>。例如，如果您將 Rovo 連接至 SharePoint，並在瀏覽器中查看 Word 文件，您可以要求 Rovo Chat 摘要該 Word 文件的內容。</li> </ul><p><span><br></span></p><p></p><ul> <li>此外，該擴展會讀取（但不存儲）私人 Google Docs 的內容，以便在瀏覽器中提供定義訪問功能。文檔內容僅會發送至 Atlassian 以檢測可定義的單詞，且不會存儲或發送至任何第三方模型（如 OpenAI）。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "權限如何保持同步"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_7",
+    "html": "<p></p><ul> <li>當您設置連接器後，Rovo 會與第三方產品建立安全同步機制。當該產品中有新內容被建立或刪除時，相關資訊會同步至 Rovo。</li> </ul><p><span><br></span></p><p></p><ul> <li>這表示，您在第三方產品中的受限數據（例如 Google Drive 中的私人檔案或資料夾）只能由那些在該第三方產品中已經擁有該內容存取權的使用者，在 Rovo 中查看與使用。</li> </ul>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "組織管理者權限"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_8",
+    "html": "<p></p><ol> <li>可手動對各產品啟用/停用 AI 功能，但非 AI 的 Rovo 功能（如 Rovo 搜尋）不可停用。</li> <li>能限制資料可被 AI/Rovo 存取，唯 Rovo 搜尋、Studio、書籤屬平台級功能，始終開啟。</li> <li>可為 Google Drive、Microsoft SharePoint 設定允許/封鎖清單以限制索引內容</li> <li>Rovo 範圍內的應用資料可駐留於 AWS 選定區域資料駐留（Data Residency）</li> </ol>"
+   },
+   {
+    "t": "btn",
+    "ux": "Block",
+    "aid": "",
+    "text": "Rovo 第三方連接器是否預設啟用？"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "FAQ_ANSWER_RENDERED_9",
+    "html": "<p></p><ol> <li>管理員管理的連接器：預設不啟用，需 org 管理員手動連接；啟用後尊重原有權限，擴充 Agents、搜尋與聊天能力。</li> <li>Smart Link 連接器：無需管理員設定，依個人權限與歷史顯示結果。 </li> </ol>"
+   }
+  ]
+ },
+ {
+  "n": 15,
+  "nodes": [
+   {
+    "t": "rich",
+    "ux": "Details",
+    "aid": "SECONDARY_TITLE_RENDERED",
+    "html": "鈦坦客戶專屬優惠"
+   },
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "HeadingMajor",
+    "aid": "SECTION_TITLE_RENDERED",
+    "text": "Atlassian Rovo 免費課程"
+   },
+   {
+    "t": "rich",
+    "ux": "Text",
+    "aid": "DESCRIPTION_TEXT",
+    "html": "<p><span>Rovo AI 系列課程．幫助您的企業有效提升業務效率與創新能力。</span></p>"
+   },
+   {
+    "t": "a",
+    "href": "https://leorepro.github.io/atlassian-rovo-course/",
+    "ux": "ButtonSecondary",
+    "text": "瞭解更多",
+    "aid": "CTA_BUTTON_RENDERED"
+   }
+  ]
+ },
+ {
+  "n": 16,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "CONTACT_SECTION_TITLE_REND",
+    "text": "與我們聯絡"
+   },
+   {
+    "t": "field",
+    "tag": "input",
+    "label": "",
+    "type": "text",
+    "aid": ""
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "HeadingMinor",
+    "aid": "CONTACT_FORM_TITLE_REND",
+    "text": "歡迎來信了解更多資訊！"
+   },
+   {
+    "t": "field",
+    "tag": "input",
+    "label": "",
+    "type": "text",
+    "aid": "名稱"
+   },
+   {
+    "t": "field",
+    "tag": "input",
+    "label": "",
+    "type": "text",
+    "aid": "電子郵件"
+   },
+   {
+    "t": "field",
+    "tag": "textarea",
+    "label": "訊息",
+    "type": "",
+    "aid": "訊息"
+   },
+   {
+    "t": "field",
+    "tag": "input",
+    "label": "",
+    "type": "file",
+    "aid": ""
+   },
+   {
+    "t": "btn",
+    "ux": "ButtonPrimary",
+    "aid": "CONTACT_SUBMIT_BUTTON_REND",
+    "text": "傳送"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentHeading",
+    "aid": "CONTACT_INFO_BIZ_NAME_REND",
+    "text": "新加坡商鈦坦科技"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "CONTACT_INFO_ADDRESS_REND",
+    "html": "11503 台北市南港區園區街3之1號11樓之1(南港軟體園區 G 棟)"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentText",
+    "aid": "",
+    "html": "<a rel=\"\" role=\"link\" aria-haspopup=\"false\" href=\"tel:0277236686\">02-7723-6686</a> <a rel=\"\" role=\"link\" aria-haspopup=\"false\" href=\"mailto:sales@titansoft.com.sg\">sales@titansoft.com.sg</a>"
+   }
+  ]
+ },
+ {
+  "n": 17,
+  "nodes": [
+   {
+    "t": "h",
+    "tag": "h2",
+    "ux": "SectionHeading",
+    "aid": "VIDEO_SECTION_TITLE_RENDERED",
+    "text": "其他參考影片"
+   },
+   {
+    "t": "iframe",
+    "src": "https://youtube.com/embed/PKw0uhPKTds?ab_channel=Atlassian&rel=0&showinfo=0&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED0"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED0",
+    "text": "Meet Rovo, your AI-powered teammate"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED0",
+    "html": "<p><span>Rovo is your AI teammate, powered by Atlassian Intelligence. With Rovo, quickly find information across your Atlassian and third-party apps, learn and iterate on knowledge as you work, and take action faster with specialized virtual agents. Discover how to unleash the potential of every team with Atlassian Rovo.</span></p>"
+   },
+   {
+    "t": "iframe",
+    "src": "https://youtube.com/embed/attXFo60Blc?ab_channel=Atlassian&rel=0&showinfo=0&start=1445&autoplay=0&loop=0&muted=0&controls=1",
+    "aid": "VIDEO_VIDEO_RENDERED1"
+   },
+   {
+    "t": "h",
+    "tag": "h4",
+    "ux": "ContentCardHeading",
+    "aid": "VIDEO_HEADLINE_RENDERED1",
+    "text": "The Ultimate Rovo Agents guide | Team '24 Europe"
+   },
+   {
+    "t": "rich",
+    "ux": "ContentCardText",
+    "aid": "VIDEO_DESCRIPTION_RENDERED1",
+    "html": "<p><span>Your guide to building no-code Agents in Rovo</span></p><p><span>The video introduces the features and future prospects of Rovo Agents, focusing on how to create and customize agents. It also demonstrates their applications and benefits in team collaboration through examples.</span></p>"
+   }
+  ]
+ },
+ {
+  "n": 18,
+  "nodes": [
+   {
+    "t": "a",
+    "href": "https://www.atlassian.com/software/rovo",
+    "ux": "NavFooterLink",
+    "text": "Atlassian Rovo",
+    "aid": "FOOTER_PAGE_LINK_0_RENDERED"
+   },
+   {
+    "t": "a",
+    "href": "https://www.atlassian.com/platform/artificial-intelligence",
+    "ux": "NavFooterLink",
+    "text": "Atlassian Intelligence",
+    "aid": "FOOTER_PAGE_LINK_1_RENDERED"
+   },
+   {
+    "t": "a",
+    "href": "https://www.atlassian.com/software/jira",
+    "ux": "NavFooterLink",
+    "text": "Atlassian Jira",
+    "aid": "FOOTER_PAGE_LINK_2_RENDERED"
+   },
+   {
+    "t": "a",
+    "href": "https://www.atlassian.com/software/confluence",
+    "ux": "NavFooterLink",
+    "text": "Atlassian Confluence",
+    "aid": "FOOTER_PAGE_LINK_3_RENDERED"
+   }
+  ]
+ }
+]
