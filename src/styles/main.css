@@ -4,7 +4,7 @@
    ============================================================ */
 
 :root {
-  --blue: #1c4bd6;          /* 主藍（深） */
+  --blue: #1868db;          /* 主藍（提亮，更跳） */
   --blue-bright: #2e73f0;   /* 聯絡區藍 */
   --gray-bg: #f6f6f6;       /* 淺灰區塊底色 */
   --ink: #1b1b1b;           /* 主要深色文字 */
@@ -53,6 +53,15 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------- 通用文字樣式 ---------- */
 .section { padding: 96px 0; }
+
+/* 斜切色塊：上緣不規則切邊，露出白色楔形作為分段提示 */
+.slab {
+  clip-path: polygon(0 0, 84% 22px, 84.6% 40px, 100% 30px, 100% 100%, 0 100%);
+  padding-top: 128px;
+}
+.slab--alt {
+  clip-path: polygon(0 30px, 15.4% 40px, 16% 22px, 100% 0, 100% 100%, 0 100%);
+}
 .section--light { background: #fff; }
 .section--gray  { background: var(--gray-bg); }
 .section--blue  { background: var(--blue); color: #fff; }
@@ -485,12 +494,14 @@ img { max-width: 100%; height: auto; display: block; }
   cursor: pointer;
   font-family: var(--font-body);
   font-size: var(--fs-h4);
+  font-weight: 700;
   color: var(--ink-dark);
   text-align: left;
   padding: 22px 4px;
 }
-.faq-icon { flex: 0 0 auto; transition: transform .25s ease; color: #444; }
-.faq-item.open .faq-icon { transform: rotate(180deg); }
+.faq-icon { flex: 0 0 auto; transition: transform .3s ease; }
+.faq-question:hover .faq-icon { transform: scale(1.1); }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-answer {
   max-height: 0;
   overflow: hidden;
