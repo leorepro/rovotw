@@ -67,6 +67,18 @@ img { max-width: 100%; height: auto; display: block; }
 .section--blue  { background: var(--blue); color: #fff; }
 .section--contact { background: var(--blue-bright); color: #fff; padding-bottom: 56px; }
 
+/* 多色色塊（亮底配深色文字，呼應參考頁的繽紛分區） */
+.section--yellow { background: #f5cd47; color: var(--ink); }
+.section--green  { background: #94c748; color: #14290a; }
+.section--purple { background: #c97cf4; color: #1d0b2e; }
+.section--yellow .card-heading,
+.section--green .card-heading,
+.section--purple .card-heading { color: var(--ink); }
+.section--green .feature-figure figcaption { color: #14290a; }
+.section--yellow .heading-rule,
+.section--green .heading-rule,
+.section--purple .heading-rule { border-top-color: rgba(0, 0, 0, 0.25); }
+
 .section-heading {
   font-family: var(--font-head);
   font-size: var(--fs-h2);
@@ -311,7 +323,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ============ 卡片網格（挑戰 / Do-Don't） ============ */
 .card-grid { row-gap: 48px; }
-.challenge ul { color: #fff; }
+.section--blue .challenge ul { color: #fff; }
+.section--yellow .challenge ul { color: #3a3000; }
 
 /* ============ 圖文列（media rows） ============ */
 .media-row {
@@ -686,6 +699,41 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 24px 0 14px;
 }
 .video-desc { text-align: center; color: var(--body); margin: 0; }
+
+/* ---------- 活潑感：卡片 hover 浮起 + Hero 星花 ---------- */
+.event-card, .feature-card, .dodont-card, .video-card, .prompt-block {
+  transition: transform .25s ease, box-shadow .25s ease, opacity .6s ease;
+}
+.event-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16); }
+.feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 26px rgba(0, 0, 0, 0.10); }
+.video-card:hover .video-embed iframe { box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14); }
+.dodont-card:hover { transform: translateY(-6px); }
+
+.hero-center { position: relative; }
+.doodle {
+  position: absolute;
+  font-size: 40px;
+  line-height: 1;
+  pointer-events: none;
+  animation: doodle-float 4.5s ease-in-out infinite;
+}
+.doodle-1 { top: 6%; right: 16%; color: var(--ink); transform: rotate(12deg); }
+.doodle-2 {
+  top: 38%; left: 13%;
+  color: var(--blue);
+  font-size: 30px;
+  animation-delay: 1.4s;
+}
+@keyframes doodle-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .doodle { animation: none; }
+}
+@media (max-width: 767px) {
+  .doodle { display: none; }
+}
 
 /* ---------- 捲動進場動畫 ---------- */
 .reveal {
