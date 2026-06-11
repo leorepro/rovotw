@@ -70,20 +70,30 @@
     <svg class="sprig flip" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 21c0-4 .5-7.5 4-11M12 21c0-5-1-8-4-10" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round"/><path d="M16 10c2 .2 3.6-.8 4.3-2.7-1.9-.7-3.7-.2-4.8 1.4M8 11C6 11.2 4.4 10.2 3.7 8.3c1.9-.7 3.7-.2 4.8 1.4" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
   </a>
 
-  <header class="site-header">
-    <a class="logo" href="/">Atlassian Rovo<br />新加坡商鈦坦科技</a>
+  <header class="site-nav" id="siteNav">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="/">Atlassian Rovo<span>新加坡商鈦坦科技</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="主選單">
+        <a href="#features">Rovo 功能</a>
+        <a href="#videos">實例影片</a>
+        <a href="#agents">Rovo Agent</a>
+        <a href="#faq">常見問題</a>
+        <a href="#subscribe">訂閱資訊</a>
+      </nav>
+      <a class="btn btn--blue nav-cta" href="#contact">與我們聯絡</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="開啟選單" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </header>
 
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1 class="tagline">Rovo<br />專為企業設計的AI</h1>
-        <p class="hero-sub"><strong>用 Rovo 賦能團隊，更智慧地工作</strong></p>
-        <p class="hero-sub muted">提高工作效率與工作品質</p>
-      </div>
-      <div class="hero-media">
-        <img src="/images/hero-rovo-w1209.webp" srcset="/images/hero-rovo-w480.webp 480w, /images/hero-rovo-w960.webp 960w, /images/hero-rovo-w1209.webp 1209w" sizes="(max-width: 767px) 100vw, 641px" alt="Rovo Agents" width="641" height="641" />
-      </div>
+    <div class="container hero-center">
+      <h1 class="tagline">Rovo<br />專為企業設計的AI</h1>
+      <p class="hero-sub"><strong>用 Rovo 賦能團隊，更智慧地工作</strong></p>
+      <p class="hero-sub muted">提高工作效率與工作品質</p>
+      <a class="btn btn--blue hero-cta" href="#contact">與我們聯絡</a>
+      <img class="hero-img" src="/images/hero-rovo-w1209.webp" srcset="/images/hero-rovo-w480.webp 480w, /images/hero-rovo-w960.webp 960w, /images/hero-rovo-w1209.webp 1209w" sizes="(max-width: 767px) 100vw, 620px" alt="Rovo Agents" width="641" height="641" fetchpriority="high" />
     </div>
   </section>
 
@@ -157,7 +167,7 @@
   </section>
 
   <!-- ===== Section 3: Rovo 是什麼 ===== -->
-  <section class="section section--light">
+  <section class="section section--light" id="features">
     <div class="container">
       <h2 class="section-heading">Rovo 是什麼？一款強大的 AI 助手提升團隊效率</h2>
       <hr class="heading-rule" />
@@ -198,7 +208,7 @@
   </section>
 
   <!-- ===== Section 4: Rovo AI 實際執行範例 ===== -->
-  <section class="section section--blue videos">
+  <section class="section section--blue videos" id="videos">
     <div class="container">
       <h2 class="section-heading">Rovo AI 實際執行範例</h2>
       <hr class="heading-rule" />
@@ -314,7 +324,7 @@
   </section>
 
   <!-- ===== Section 8: Rovo Agent 輪播 ===== -->
-  <section class="section section--light">
+  <section class="section section--light" id="agents">
     <div class="container">
       <h2 class="section-heading">透過 Rovo Agent 虛擬隊友，可靈活應用既有組織知識。幫助你『降低人工時間』與『提升產出品質』</h2>
       <hr class="heading-rule" />
@@ -419,8 +429,15 @@
     <div class="container">
       <h2 class="section-heading">編寫 AI 提示詞的基礎元素</h2>
       <hr class="heading-rule" />
-      <div class="prompt-blocks rich">
-        <div class="prompt-block">
+      <div class="prompt-tab-list" id="promptTabs" role="tablist" aria-label="提示詞元素">
+        <button role="tab" aria-selected="true" class="active">關鍵要素</button>
+        <button role="tab" aria-selected="false">角色 Role</button>
+        <button role="tab" aria-selected="false">工作 Job</button>
+        <button role="tab" aria-selected="false">背景 Context</button>
+        <button role="tab" aria-selected="false">額外元素</button>
+      </div>
+      <div class="prompt-blocks rich" id="promptPanels">
+        <div class="prompt-block active" role="tabpanel">
           <h4 class="content-heading">關鍵要素</h4>
           <p>優秀 AI 提示詞的關鍵要素提示中包含的元素和細節等級應該根據您希望 AI 執行的任務的複雜性進行自訂。如果您向 AI 提出一個簡單的問題，您可以使用與詢問同事時相同的自然語言來回答。而精心設計的生成式 AI 提示應包含以下元素：</p>
           <ul>
@@ -429,21 +446,21 @@
             <li><strong>背景(Context)</strong>：提供有用的背景資訊或上下文。</li>
           </ul>
         </div>
-        <div class="prompt-block">
+        <div class="prompt-block" role="tabpanel" hidden>
           <h4 class="content-heading">角色(Role)</h4>
           <ul>
             <li>角色定義了人工智慧在產生回應時應假設的視角或角色。這有助於人工智慧自訂其輸出以適應所需的上下文和語氣。</li>
             <li>角色類型可以是具有以下特徵的人： 特定主題的專業知識（「擔任 Jira 報告專家。」） 獨特的觀點或意見（「作為 Confluence 管理員，解釋…」） 特定的職業（「擔任行銷分析師的角色。」） 您可以要求 AI 扮演多個角色（甚至是虛構的角色），以提供您所需的觀點和專業知識的理想組合。</li>
           </ul>
         </div>
-        <div class="prompt-block">
+        <div class="prompt-block" role="tabpanel" hidden>
           <h4 class="content-heading">工作(Job)</h4>
           <ul>
             <li>在這項工作中，您將使用動作動詞，例如「解釋」、「撰寫」、「分析」、「列舉」等，來清楚指示 AI 執行特定操作或提供所需資訊。</li>
             <li>您的指示越具體，AI 生成的結果就會越精確。此外，為 AI 提供明確的規則或指南，有助於確保輸出內容符合您的期望，並減少後續修正的需求。這樣的寫法讓語句更流暢、專業，並強調了清楚指示對於獲得理想結果的重要性。若有其他細節想加入或強調，可以再調整內容！</li>
           </ul>
         </div>
-        <div class="prompt-block">
+        <div class="prompt-block" role="tabpanel" hidden>
           <h4 class="content-heading">背景(Context)</h4>
           <ul>
             <li>提供背景資訊有助於人工智慧理解與任務相關的背景或情境。這可能包括您為何需要這些資訊、涉及的對象，以及任何相關的背景細節。提供背景資訊能確保 AI 的回應更貼合您的特定需求與情境。背景資訊可能包括：</li>
@@ -455,7 +472,7 @@
             <li>結果的預期用途</li>
           </ol>
         </div>
-        <div class="prompt-block">
+        <div class="prompt-block" role="tabpanel" hidden>
           <h4 class="content-heading">額外元素</h4>
           <ul>
             <li>除了必要的組成要素外，還有一些可選元素可以提升 AI 提示的品質，從而改善 AI 的回應效果。這些元素並非每個提示都必須包含，但在特定情境下可能會很有幫助。</li>
@@ -505,7 +522,7 @@
   </section>
 
   <!-- ===== Section 14: 常見問題 ===== -->
-  <section class="section section--gray">
+  <section class="section section--gray" id="faq">
     <div class="container">
       <h2 class="section-heading">常見問題</h2>
       <hr class="heading-rule" />
@@ -656,8 +673,8 @@
         <img src="/images/getty-170152463-w1440.webp" srcset="/images/getty-170152463-w480.webp 480w, /images/getty-170152463-w960.webp 960w, /images/getty-170152463-w1440.webp 1440w, /images/getty-170152463-w1920.webp 1920w" sizes="(max-width: 767px) calc(100vw - 48px), 528px" alt="團隊會議" loading="lazy" />
       </div>
       <div class="media-row-copy course-copy">
-        <p class="course-eyebrow">鈦坦客戶專屬優惠</p>
-        <h2 class="heading-major">Atlassian Rovo 免費課程</h2>
+        <p class="course-eyebrow"><span class="eyebrow-arrow">→</span> 鈦坦客戶專屬優惠</p>
+        <h2 class="heading-major">Atlassian Rovo<br />免費課程</h2>
         <p class="course-desc">Rovo AI 系列課程．幫助您的企業有效提升業務效率與創新能力。</p>
         <a class="btn btn--blue" href="https://leorepro.github.io/atlassian-rovo-course/" target="_blank" rel="noopener">瞭解更多</a>
       </div>
@@ -698,16 +715,14 @@
           <p>11503 台北市南港區園區街3之1號11樓之1(南港軟體園區 G 棟)</p>
           <p><a href="tel:0277236686">02-7723-6686</a><br />
              <a href="mailto:sales@titansoft.com.sg">sales@titansoft.com.sg</a></p>
+          <div class="contact-map">
+            <iframe title="新加坡商鈦坦科技位置地圖" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%9C%92%E5%8D%80%E8%A1%973%E4%B9%8B1%E8%99%9F&z=13&output=embed"></iframe>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- 地圖 -->
-  <div class="map-embed">
-    <iframe title="新加坡商鈦坦科技位置地圖" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
-      src="https://maps.google.com/maps?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E5%9C%92%E5%8D%80%E8%A1%973%E4%B9%8B1%E8%99%9F&z=13&output=embed"></iframe>
-  </div>
 
   <!-- ===== Section 17: 其他參考影片 ===== -->
   <section class="section section--light">

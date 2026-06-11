@@ -150,8 +150,50 @@ function initSubscribe(): void {
   })
 }
 
+// ---------- Sticky 導覽列 ----------
+function initNav(): void {
+  const nav = document.getElementById('siteNav')
+  const toggle = document.getElementById('navToggle')
+  if (!nav || !toggle) return
+
+  window.addEventListener(
+    'scroll',
+    () => nav.classList.toggle('scrolled', window.scrollY > 8),
+    { passive: true },
+  )
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open')
+    toggle.setAttribute('aria-expanded', String(open))
+  })
+  nav.querySelectorAll('.nav-links a').forEach((a) =>
+    a.addEventListener('click', () => nav.classList.remove('open')),
+  )
+}
+
+// ---------- 提示詞 pill 分頁 ----------
+function initPromptTabs(): void {
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>('#promptTabs button')]
+  const panels = [...document.querySelectorAll<HTMLElement>('#promptPanels .prompt-block')]
+  if (!tabs.length || tabs.length !== panels.length) return
+
+  tabs.forEach((tab, i) =>
+    tab.addEventListener('click', () => {
+      tabs.forEach((t, j) => {
+        t.classList.toggle('active', i === j)
+        t.setAttribute('aria-selected', String(i === j))
+      })
+      panels.forEach((p, j) => {
+        p.hidden = i !== j
+        p.classList.toggle('active', i === j)
+      })
+    }),
+  )
+}
+
+initNav()
 initFaq()
 initCarousel()
 initEventsDots()
 initContactForm()
 initSubscribe()
+initPromptTabs()

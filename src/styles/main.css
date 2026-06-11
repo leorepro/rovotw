@@ -143,34 +143,77 @@ img { max-width: 100%; height: auto; display: block; }
 .announcement:hover span { text-decoration: underline; }
 .sprig.flip { transform: scaleX(-1); }
 
-.site-header { padding: 34px 24px 10px; text-align: center; }
-.logo {
+/* Sticky 導覽列 */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  transition: box-shadow .2s ease;
+}
+.site-nav.scrolled { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); }
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  height: 64px;
+}
+.nav-logo {
   font-family: var(--font-logo);
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 1.2;
   color: var(--ink);
   text-decoration: none;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+.nav-logo span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--body);
+  letter-spacing: .5px;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  margin-left: auto;
+}
+.nav-links a {
+  font-size: 15px;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 6px 2px;
+}
+.nav-links a:hover { color: var(--blue); }
+.nav-cta { padding: 9px 22px; font-size: 15px; }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 6px;
 }
 
-.hero { padding: 40px 0 64px; }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  align-items: center;
-  gap: 48px;
-}
+/* Hero（置中式） */
+.hero { padding: 72px 0 64px; }
+.hero-center { text-align: center; }
 .tagline {
   font-family: var(--font-head);
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--ink);
-  margin: 0 0 36px;
+  margin: 0 0 24px;
 }
-.hero-sub { font-size: 19px; margin: 0 0 8px; color: var(--ink); }
+.hero-sub { font-size: 20px; margin: 0 0 8px; color: var(--ink); }
 .hero-sub.muted { color: var(--body); font-size: 18px; }
-.hero-media img { width: min(641px, 100%); margin-left: auto; }
+.hero-cta { margin-top: 22px; }
+.hero-img {
+  width: min(620px, 100%);
+  margin: 36px auto 0;
+}
 
 /* ============ Section 1：最新活動資訊 ============ */
 .events-track {
@@ -375,10 +418,45 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 16px;
 }
 
-/* ============ Section 12：提示詞 ============ */
-.prompt-blocks { max-width: 720px; margin: 0 auto; }
-.prompt-block { margin-bottom: 40px; }
-.prompt-block:last-child { margin-bottom: 0; }
+/* ============ Section 12：提示詞（pill 分頁互動） ============ */
+.prompt-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+.prompt-tab-list button {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 48px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.prompt-tab-list button:hover { border-color: var(--blue); color: var(--blue); }
+.prompt-tab-list button.active {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+.prompt-blocks { max-width: 760px; margin: 0 auto; }
+.prompt-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 36px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  animation: prompt-in .3s ease;
+}
+.prompt-block[hidden] { display: none; }
+@keyframes prompt-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
 .prompt-block .content-heading { text-align: left; color: var(--ink); }
 
 /* ============ Section 14：FAQ ============ */
@@ -414,16 +492,24 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ============ Section 15：課程 CTA ============ */
 .course .media-row { margin-bottom: 0; }
-.course-eyebrow { font-size: 32px; color: #000; margin: 0 0 4px; }
+.course-eyebrow {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--blue);
+  margin: 0 0 14px;
+}
+.eyebrow-arrow { font-size: 16px; margin-right: 4px; }
 .heading-major {
   font-family: var(--font-head);
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.18;
   color: var(--ink);
   margin: 0 0 18px;
 }
-.course-desc { font-size: 20px; color: var(--body); margin: 0 0 28px; }
+.course-desc { font-size: 19px; color: var(--body); margin: 0 0 28px; }
+.course .media-row-media img { box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12); }
 
 /* ============ Section 16：聯絡表單 ============ */
 .contact-grid {
@@ -490,12 +576,13 @@ img { max-width: 100%; height: auto; display: block; }
 .contact-info p { margin: 0 0 18px; }
 .contact-info a { color: #fff; text-decoration: none; }
 .contact-info a:hover { text-decoration: underline; }
-
-.map-embed iframe {
+.contact-map { margin-top: 26px; }
+.contact-map iframe {
   display: block;
   width: 100%;
-  height: 430px;
+  height: 300px;
   border: 0;
+  border-radius: 10px;
 }
 
 /* ============ Section 17：參考影片 ============ */
@@ -539,8 +626,21 @@ img { max-width: 100%; height: auto; display: block; }
    RWD
    ============================================================ */
 @media (max-width: 1023px) {
-  .logo { font-size: 34px; }
-  .tagline { font-size: 44px; }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; margin-left: auto; }
+  .nav-cta { display: none; }
+  .site-nav.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: #fff;
+    padding: 12px 24px 20px;
+    gap: 4px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  .site-nav.open .nav-links a { padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.06); }
+  .tagline { font-size: 48px; }
   .heading-major { font-size: 40px; }
   .section-heading { font-size: 30px; }
   .card-heading { font-size: 28px; }
@@ -553,13 +653,10 @@ img { max-width: 100%; height: auto; display: block; }
   .section { padding: 56px 0; }
   .section-heading { font-size: 26px; }
   .heading-rule { margin-bottom: 36px; }
-  .logo { font-size: 28px; }
-  .site-header { padding-top: 24px; }
 
-  .hero { padding: 24px 0 40px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .hero-media { order: -1; }
-  .tagline { font-size: 36px; margin-bottom: 20px; }
+  .hero { padding: 40px 0; }
+  .tagline { font-size: 38px; margin-bottom: 20px; }
+  .heading-major { font-size: 32px; }
 
   .grid-2 { grid-template-columns: 1fr; gap: 36px; }
 
@@ -581,7 +678,8 @@ img { max-width: 100%; height: auto; display: block; }
   .subscribe-form .btn { width: 100%; }
 
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-  .map-embed iframe { height: 320px; }
+  .contact-map iframe { height: 240px; }
+  .prompt-block { padding: 24px 20px; }
 
   .carousel-thumbs button { width: 64px; height: 42px; }
 }
