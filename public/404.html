@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>找不到頁面 - Atlassian Rovo 新加坡商鈦坦科技</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Noto Sans', Arial, sans-serif;
+      color: #1b1b1b;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bar { background: #111; height: 40px; }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .code {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 120px;
+      font-weight: 500;
+      line-height: 1;
+      color: #1c4bd6;
+      margin: 0 0 16px;
+    }
+    h1 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      margin: 0 0 12px;
+    }
+    p { color: #5e5e5e; font-size: 17px; margin: 0 0 32px; }
+    .btn {
+      display: inline-block;
+      background: #1c4bd6;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 48px;
+      padding: 15px 40px;
+      transition: filter .15s ease;
+    }
+    .btn:hover { filter: brightness(.94); }
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #5e5e5e;
+      font-size: 14px;
+    }
+    @media (max-width: 767px) {
+      .code { font-size: 80px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar"></div>
+  <main>
+    <p class="code">404</p>
+    <h1>找不到這個頁面</h1>
+    <p>您要找的頁面可能已經移動或不存在，回到首頁繼續瀏覽吧。</p>
+    <a class="btn" id="homeLink" href="/">回到首頁</a>
+  </main>
+  <footer>Copyright © 2025 鈦坦科技 — 保留所有權利。</footer>
+  <script>
+    // GitHub Pages 專案網站的首頁在 /<repo>/；綁自訂網域後自動變回 /
+    if (location.hostname.endsWith('github.io')) {
+      document.getElementById('homeLink').href = '/' + location.pathname.split('/')[1] + '/';
+    }
+  </script>
+</body>
+</html>
