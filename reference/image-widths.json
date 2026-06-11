@@ -1,0 +1,179 @@
+{
+ "1.png": {
+  "origWidth": 1800,
+  "widths": [
+   480,
+   960,
+   1440,
+   1800
+  ]
+ },
+ "2.png": {
+  "origWidth": 1800,
+  "widths": [
+   480,
+   960,
+   1440,
+   1800
+  ]
+ },
+ "20250305184941.png": {
+  "origWidth": 1758,
+  "widths": [
+   480,
+   960,
+   1440,
+   1758
+  ]
+ },
+ "20250305185443-cb3dc01.png": {
+  "origWidth": 1752,
+  "widths": [
+   480,
+   960,
+   1440,
+   1752
+  ]
+ },
+ "20250305185519-f5c0f1c.png": {
+  "origWidth": 1754,
+  "widths": [
+   480,
+   960,
+   1440,
+   1754
+  ]
+ },
+ "20250305185606-61dc3d5.png": {
+  "origWidth": 1920,
+  "widths": [
+   480,
+   960,
+   1440,
+   1920
+  ]
+ },
+ "20260604141538.png": {
+  "origWidth": 2222,
+  "widths": [
+   480,
+   960,
+   1440,
+   1920
+  ]
+ },
+ "20260604161754.png": {
+  "origWidth": 1867,
+  "widths": [
+   480,
+   960,
+   1440,
+   1867
+  ]
+ },
+ "agent-knowledge.png": {
+  "origWidth": 1800,
+  "widths": [
+   480,
+   960,
+   1440,
+   1800
+  ]
+ },
+ "discover-the-power-of-the-teamwork-graph.png": {
+  "origWidth": 1254,
+  "widths": [
+   480,
+   960,
+   1254
+  ]
+ },
+ "event-ai-knowledge-ops.png": {
+  "origWidth": 1080,
+  "widths": [
+   480,
+   960,
+   1080
+  ]
+ },
+ "event-build-to-value.png": {
+  "origWidth": 1254,
+  "widths": [
+   480,
+   960,
+   1254
+  ]
+ },
+ "event-harness-context.png": {
+  "origWidth": 1254,
+  "widths": [
+   480,
+   960,
+   1254
+  ]
+ },
+ "event-loom.png": {
+  "origWidth": 600,
+  "widths": [
+   480,
+   600
+  ]
+ },
+ "event-team26.png": {
+  "origWidth": 1254,
+  "widths": [
+   480,
+   960,
+   1254
+  ]
+ },
+ "getty-170152463.jpg": {
+  "origWidth": 2560,
+  "widths": [
+   480,
+   960,
+   1440,
+   1920
+  ]
+ },
+ "harness-context-with-rovo.png": {
+  "origWidth": 720,
+  "widths": [
+   480,
+   720
+  ]
+ },
+ "hero-rovo.png": {
+  "origWidth": 1209,
+  "widths": [
+   480,
+   960,
+   1209
+  ]
+ },
+ "rovo-automation.png": {
+  "origWidth": 1112,
+  "widths": [
+   480,
+   960,
+   1112
+  ]
+ },
+ "rovoagnet-13ebb2e.png": {
+  "origWidth": 2560,
+  "widths": [
+   480,
+   960,
+   1440,
+   1920
+  ]
+ },
+ "teamwork-graph.png": {
+  "origWidth": 1350,
+  "widths": [
+   480,
+   960,
+   1350
+  ]
+ }
+}
