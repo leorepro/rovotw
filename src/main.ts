@@ -104,7 +104,53 @@ function initContactForm(): void {
   }
 }
 
+// ---------- 訂閱最新資訊（MailerLite） ----------
+// 啟用方式：在 MailerLite 後台建立 Embedded Form，把表單的 action URL 貼到下面
+// 格式像：https://assets.mailerlite.com/jsonp/XXXXXX/forms/YYYYYYYYYY/subscribe
+const MAILERLITE_FORM_ACTION = ''
+
+function initSubscribe(): void {
+  const form = document.getElementById('subscribeForm') as HTMLFormElement | null
+  const status = document.getElementById('subscribeStatus')
+  if (!form || !status) return
+
+  const show = (msg: string, ok: boolean): void => {
+    status.textContent = msg
+    status.classList.toggle('ok', ok)
+    status.classList.toggle('err', !ok)
+    status.hidden = false
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    if (!MAILERLITE_FORM_ACTION) {
+      show('訂閱功能即將開放，敬請期待！', true)
+      return
+    }
+    const btn = form.querySelector('button')!
+    btn.disabled = true
+    try {
+      const res = await fetch(`${MAILERLITE_FORM_ACTION}?ajax=1`, {
+        method: 'POST',
+        body: new FormData(form),
+      })
+      const data = await res.json()
+      if (data.success) {
+        show('✓ 已收到您的訂閱，請至信箱點擊確認信完成訂閱！', true)
+        form.reset()
+      } else {
+        show('訂閱失敗，請確認電子郵件格式後再試一次。', false)
+      }
+    } catch {
+      show('連線發生問題，請稍後再試。', false)
+    } finally {
+      btn.disabled = false
+    }
+  })
+}
+
 initFaq()
 initCarousel()
 initEventsDots()
 initContactForm()
+initSubscribe()
