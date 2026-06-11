@@ -622,12 +622,24 @@ img { max-width: 100%; height: auto; display: block; }
   cursor: pointer;
   transition: all .15s ease;
 }
-.prompt-tab-list button:hover { border-color: var(--blue); color: var(--blue); }
+.prompt-tab-list button:hover { border-color: currentColor; transform: translateY(-2px); }
 .prompt-tab-list button.active {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: #fff;
+  color: var(--ink);
+  border-color: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
+/* 五顆 pill 各自的代表色（active 時上色，內容卡頂條同步） */
+.prompt-tab-list button:nth-child(1).active { background: var(--blue); color: #fff; }
+.prompt-tab-list button:nth-child(2).active { background: #94c748; }
+.prompt-tab-list button:nth-child(3).active { background: #f5cd47; }
+.prompt-tab-list button:nth-child(4).active { background: #c97cf4; }
+.prompt-tab-list button:nth-child(5).active { background: #ff8fb1; }
+.prompt-tab-list button:nth-child(1):not(.active):hover { color: var(--blue); }
+.prompt-tab-list button:nth-child(2):not(.active):hover { color: #5d8a1d; }
+.prompt-tab-list button:nth-child(3):not(.active):hover { color: #9a7b00; }
+.prompt-tab-list button:nth-child(4):not(.active):hover { color: #8e3fc7; }
+.prompt-tab-list button:nth-child(5):not(.active):hover { color: #d4477a; }
 .prompt-blocks { max-width: 760px; margin: 0 auto; }
 .prompt-block {
   background: #fff;
@@ -635,7 +647,12 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 32px 36px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
   animation: prompt-in .3s ease;
+  border-top: 6px solid var(--blue);
 }
+.prompt-block:nth-child(2) { border-top-color: #94c748; }
+.prompt-block:nth-child(3) { border-top-color: #f5cd47; }
+.prompt-block:nth-child(4) { border-top-color: #c97cf4; }
+.prompt-block:nth-child(5) { border-top-color: #ff8fb1; }
 .prompt-block[hidden] { display: none; }
 @keyframes prompt-in {
   from { opacity: 0; transform: translateY(8px); }
