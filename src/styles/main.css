@@ -478,6 +478,57 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .prompt-block .content-heading { text-align: left; color: var(--ink); }
 
+/* ============ Section 13：Do / Don't 卡片 ============ */
+.dodont-grid { align-items: stretch; }
+.dodont-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 36px 36px 28px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+.dodont-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-head);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.dd-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: var(--fs-h4);
+  font-weight: 700;
+}
+.dodont-card--do .dd-icon { background: #22a06b; }
+.dodont-card--dont .dd-icon { background: #e2483d; }
+.dodont-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--body);
+}
+.dodont-list li {
+  position: relative;
+  padding: 14px 0 14px 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.dodont-list li::before {
+  position: absolute;
+  left: 2px;
+  top: 14px;
+  font-weight: 700;
+}
+.dodont-card--do .dodont-list li::before { content: '✓'; color: #22a06b; }
+.dodont-card--dont .dodont-list li::before { content: '✕'; color: #e2483d; }
+.dodont-list strong { color: var(--ink); }
+
 /* ============ Section 14：FAQ ============ */
 .faq-intro { color: var(--body); margin: -16px 0 32px; }
 .faq-intro a { color: var(--blue); }
