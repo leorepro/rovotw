@@ -594,22 +594,31 @@
   </section>
 
   <!-- ===== Section 16: 與我們聯絡（表單僅外觀，暫不送出） ===== -->
-  <section class="section section--contact">
+  <section class="section section--contact" id="contact">
     <div class="container">
       <h2 class="section-heading">與我們聯絡</h2>
       <hr class="heading-rule" />
       <div class="contact-grid">
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm"
+              action="https://formsubmit.co/sales@titansoft.com.sg" method="POST" enctype="multipart/form-data">
           <h4 class="content-heading">歡迎來信了解更多資訊！</h4>
-          <div class="field"><input type="text" id="cf-name" placeholder=" " /><label for="cf-name">名稱</label></div>
-          <div class="field"><input type="email" id="cf-email" placeholder=" " /><label for="cf-email">電子郵件*</label></div>
-          <div class="field"><textarea id="cf-msg" rows="5" placeholder=" "></textarea><label for="cf-msg">訊息</label></div>
+          <p class="form-banner" id="formBanner" hidden>✓ 訊息已送出，我們會盡快與您聯絡！</p>
+          <!-- FormSubmit 設定欄位 -->
+          <input type="hidden" name="_subject" value="網站聯絡表單訊息 - Atlassian Rovo" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" id="formNext" value="" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="field"><input type="text" name="name" id="cf-name" placeholder=" " /><label for="cf-name">名稱</label></div>
+          <div class="field"><input type="email" name="email" id="cf-email" placeholder=" " required /><label for="cf-email">電子郵件*</label></div>
+          <div class="field"><textarea name="message" id="cf-msg" rows="5" placeholder=" "></textarea><label for="cf-msg">訊息</label></div>
           <div class="attach-row">
-            <span class="attach-link">
+            <label class="attach-link" for="cf-file">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12.5l-8.5 8.5a6 6 0 0 1-8.5-8.5L12.5 4a4 4 0 0 1 5.7 5.7L9.7 18.2a2 2 0 0 1-2.9-2.9l8-8"/></svg>
               附加檔案
-            </span>
-            <span class="attach-count">附件 (0)</span>
+            </label>
+            <input type="file" name="attachment" id="cf-file" class="visually-hidden" />
+            <span class="attach-count" id="attachCount">附件 (0)</span>
           </div>
           <button class="btn btn--white" type="submit">傳送</button>
         </form>

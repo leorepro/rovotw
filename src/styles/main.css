@@ -410,6 +410,22 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 15px;
 }
 .attach-link { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
+.attach-link:hover { text-decoration: underline; }
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.form-banner {
+  background: #fff;
+  color: #1a7f37;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 12px 16px;
+  margin: 0 0 18px;
+}
 .attach-count { font-size: 13px; opacity: .9; }
 .contact-form .btn { width: 100%; font-size: 16px; }
 .contact-info p { margin: 0 0 18px; }
