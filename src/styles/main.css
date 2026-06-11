@@ -322,10 +322,32 @@ img { max-width: 100%; height: auto; display: block; }
 .subscribe-status.ok { color: #1a7f37; }
 .subscribe-status.err { color: #c0392b; }
 
-/* ============ 卡片網格（挑戰 / Do-Don't） ============ */
+/* ============ 卡片網格 ============ */
 .card-grid { row-gap: 48px; }
-.section--blue .challenge ul { color: #fff; }
-.section--yellow .challenge ul { color: #3a3000; }
+
+/* 企業挑戰白卡 */
+.challenge-grid { align-items: stretch; }
+.challenge-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+  transition: transform .25s ease, box-shadow .25s ease, opacity .6s ease;
+}
+.challenge-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+}
+.challenge-card h4 {
+  font-family: var(--font-head);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.challenge-card p { color: var(--body); margin: 0; }
+.challenge-card strong { color: #3d3d3d; }
+.card-icon--pink { background: #ffe3ec; }
 
 /* ============ 圖文列（media rows） ============ */
 .media-row {
