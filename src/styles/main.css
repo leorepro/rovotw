@@ -251,6 +251,33 @@ img { max-width: 100%; height: auto; display: block; }
 
 .section--light .media-row .content-heading { text-align: left; }
 
+/* Rovo 主要功能三卡 */
+.features-heading {
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 48px 0 20px;
+}
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.feature-card {
+  background: var(--gray-bg);
+  border-radius: 10px;
+  padding: 28px 24px;
+}
+.feature-card h4 {
+  font-family: var(--font-body);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+.feature-card ul { margin: 0; }
+
 /* 影片區 */
 .videos .media-row { margin-bottom: 64px; }
 .video-embed { position: relative; aspect-ratio: 16 / 9; }
@@ -541,6 +568,8 @@ img { max-width: 100%; height: auto; display: block; }
   .course-eyebrow { font-size: 24px; }
   .faq-question { font-size: 18px; }
   .logo-wall { height: 180px; background-size: contain; background-repeat: no-repeat; background-color: #fff; }
+
+  .feature-cards { grid-template-columns: 1fr; }
 
   .subscribe-form { flex-direction: column; }
   .subscribe-form .btn { width: 100%; }
