@@ -146,6 +146,23 @@ img { max-width: 100%; height: auto; display: block; }
 .btn { will-change: transform; }
 .btn--blue  { background: var(--blue); color: #fff; }
 .btn--white { background: #fff; color: #303030; }
+.btn--outline {
+  background: transparent;
+  color: var(--blue);
+  box-shadow: inset 0 0 0 2px var(--blue);
+}
+
+/* Atlassian 風格的文字箭頭連結 */
+.arrow-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+}
+.arrow-link span { display: inline-block; transition: transform .2s ease; }
+.arrow-link:hover span { transform: translateX(4px); }
+.arrow-link:hover { text-decoration: underline; }
 
 /* ============ Section 0：公告列 / Header / Hero ============ */
 .announcement {
@@ -581,6 +598,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0 0 18px;
 }
 .course-desc { font-size: var(--fs-lg); color: var(--body); margin: 0 0 28px; }
+.course-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .course .media-row-media img { box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12); }
 
 /* ============ Section 16：聯絡表單 ============ */
