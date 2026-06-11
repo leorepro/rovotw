@@ -107,7 +107,8 @@ function initContactForm(): void {
 // ---------- 訂閱最新資訊（MailerLite） ----------
 // 啟用方式：在 MailerLite 後台建立 Embedded Form，把表單的 action URL 貼到下面
 // 格式像：https://assets.mailerlite.com/jsonp/XXXXXX/forms/YYYYYYYYYY/subscribe
-const MAILERLITE_FORM_ACTION = ''
+const MAILERLITE_FORM_ACTION =
+  'https://assets.mailerlite.com/jsonp/2425992/forms/189988429026559775/subscribe'
 
 function initSubscribe(): void {
   const form = document.getElementById('subscribeForm') as HTMLFormElement | null
