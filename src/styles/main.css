@@ -267,7 +267,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-sub.muted { color: var(--body); font-size: var(--fs-lg); }
 .hero-cta { margin-top: 22px; }
 .hero-img {
-  width: min(527px, 100%);
+  width: min(422px, 100%);
   margin: 36px auto 0;
 }
 
