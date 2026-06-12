@@ -201,6 +201,8 @@ function initReveal(): void {
       '.feature-card',
       '.challenge-card',
       '.quote-card',
+      '.ext-card',
+      '.secure-card',
       '.compare',
       '.video-card',
       '.event-card',
