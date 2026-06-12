@@ -61,10 +61,12 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------- 通用文字樣式 ---------- */
 .section { padding: 96px 0; }
 
-/* 斜切色塊：上緣不規則切邊，露出白色楔形作為分段提示 */
+/* 斜切色塊：上緣不規則切邊。負邊距讓色塊疊在前一區上，
+   切口露出的是前一區的顏色（兩色相鄰時不再出現白縫） */
 .slab {
   clip-path: polygon(0 0, 84% 22px, 84.6% 40px, 100% 30px, 100% 100%, 0 100%);
   padding-top: 128px;
+  margin-top: -40px;
 }
 .slab--alt {
   clip-path: polygon(0 30px, 15.4% 40px, 16% 22px, 100% 0, 100% 100%, 0 100%);
