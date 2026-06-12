@@ -933,6 +933,9 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 56px;
   align-items: start;
 }
+.contact-cta .content-heading { color: #fff; font-weight: 700; text-align: left; }
+.contact-cta p { color: rgba(255, 255, 255, 0.95); margin: 0 0 30px; max-width: 420px; }
+.contact-btn { padding: 16px 48px; font-weight: 700; }
 .contact-form .content-heading { color: #fff; font-weight: 700; text-align: left; }
 .field { position: relative; margin-bottom: 18px; }
 .field input,

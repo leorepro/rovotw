@@ -77,33 +77,6 @@ function initEventsDots(): void {
   rebuild()
 }
 
-// ---------- 聯絡表單（FormSubmit.co → sales@titansoft.com.sg） ----------
-function initContactForm(): void {
-  const form = document.getElementById('contactForm') as HTMLFormElement | null
-  if (!form) return
-
-  // 送出後 FormSubmit 會轉址回來；_next 必須是絕對網址，依目前主機動態組出
-  const next = document.getElementById('formNext') as HTMLInputElement | null
-  if (next) {
-    next.value = `${location.origin}${location.pathname}?sent=1#contact`
-  }
-
-  // 附加檔案：點「附加檔案」開檔案選擇器，更新附件數
-  const file = document.getElementById('cf-file') as HTMLInputElement | null
-  const count = document.getElementById('attachCount')
-  file?.addEventListener('change', () => {
-    if (count) count.textContent = `附件 (${file.files?.length ?? 0})`
-  })
-
-  // 轉址回來時顯示成功訊息並清掉網址參數
-  if (new URLSearchParams(location.search).get('sent') === '1') {
-    const banner = document.getElementById('formBanner')
-    if (banner) banner.hidden = false
-    document.getElementById('contact')?.scrollIntoView()
-    history.replaceState(null, '', location.pathname + location.hash)
-  }
-}
-
 // ---------- 訂閱最新資訊（MailerLite） ----------
 // 啟用方式：在 MailerLite 後台建立 Embedded Form，把表單的 action URL 貼到下面
 // 格式像：https://assets.mailerlite.com/jsonp/XXXXXX/forms/YYYYYYYYYY/subscribe
@@ -247,6 +220,5 @@ initNav()
 initFaq()
 initCarousel()
 initEventsDots()
-initContactForm()
 initSubscribe()
 initPromptTabs()
