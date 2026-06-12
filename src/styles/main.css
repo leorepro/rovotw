@@ -471,6 +471,8 @@ img { max-width: 100%; height: auto; display: block; }
   background-size: cover;
   background-position: center;
 }
+/* 緊接 logo 牆的色塊不要負疊，否則斜切會蓋住底排 logo */
+.logo-wall + .slab { margin-top: 0; }
 
 /* ============ Section 7：AI 老師 ============ */
 .feature-figure { margin: 0; }
