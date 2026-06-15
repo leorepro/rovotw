@@ -469,7 +469,9 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   flex-direction: column;
   gap: 28px;
-  padding: 48px 0;
+  padding: 16px 0 48px;
+  /* 往上靠，縮小與上一段文字之間的空白 */
+  margin-top: -56px;
   background: #fff;
   overflow: hidden;
   /* 左右邊緣淡出，營造無縫滑入滑出 */
@@ -1212,7 +1214,7 @@ img { max-width: 100%; height: auto; display: block; }
 
   .event-card { flex-basis: 84%; }
 
-  .logo-marquee { gap: 20px; padding: 32px 0; }
+  .logo-marquee { gap: 20px; padding: 8px 0 32px; margin-top: -36px; }
   .logo-marquee__track { gap: 36px; }
   .logo-marquee__track img { height: 40px; }
 
