@@ -163,6 +163,20 @@ function initPromptTabs(): void {
   )
 }
 
+// ---------- 整合應用 Logo 牆（三排無縫輪播） ----------
+function initLogoMarquee(): void {
+  const root = document.getElementById('logoMarquee')
+  if (!root) return
+
+  // 將每排內容複製一份，位移 50% 即可無縫銜接
+  root.querySelectorAll<HTMLElement>('.logo-marquee__track').forEach((track) => {
+    track.append(...[...track.children].map((node) => node.cloneNode(true)))
+  })
+
+  // 內容備妥後才啟用動畫，避免單份內容跑到一半出現空白
+  root.classList.add('is-ready')
+}
+
 // ---------- 捲動進場動畫 ----------
 function initReveal(): void {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -222,3 +236,4 @@ initCarousel()
 initEventsDots()
 initSubscribe()
 initPromptTabs()
+initLogoMarquee()

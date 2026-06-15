@@ -464,15 +464,84 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* ============ Section 6：Logo 牆 ============ */
-.logo-wall {
-  height: 300px;
-  background-image: url('../assets/logo-wall.webp');
-  background-size: cover;
-  background-position: center;
+/* ============ Section 6：Logo 牆（三排輪播） ============ */
+.logo-marquee {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 48px 0;
+  background: #fff;
+  overflow: hidden;
+  /* 左右邊緣淡出，營造無縫滑入滑出 */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
 }
-/* 緊接 logo 牆的色塊不要負疊，否則斜切會蓋住底排 logo */
-.logo-wall + .slab { margin-top: 0; }
+.logo-marquee__row {
+  overflow: hidden;
+}
+.logo-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  will-change: transform;
+}
+.logo-marquee__track li {
+  flex: 0 0 auto;
+}
+.logo-marquee__track img {
+  height: 56px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+}
+
+/* 動畫只在 JS 已複製內容（is-ready）後啟用，避免單份內容跑到一半留白 */
+.logo-marquee.is-ready .logo-marquee__track--ltr {
+  animation: marquee-ltr linear infinite;
+}
+.logo-marquee.is-ready .logo-marquee__track--rtl {
+  animation: marquee-rtl linear infinite;
+}
+/* 三排各用不同速度與起始相位，避免第 1、3 排看起來同步 */
+.logo-marquee.is-ready .logo-marquee__row:nth-child(1) .logo-marquee__track {
+  animation-duration: 52s;
+  animation-delay: -7s;
+}
+.logo-marquee.is-ready .logo-marquee__row:nth-child(2) .logo-marquee__track {
+  animation-duration: 44s;
+}
+.logo-marquee.is-ready .logo-marquee__row:nth-child(3) .logo-marquee__track {
+  animation-duration: 73s;
+  animation-delay: -23s;
+}
+/* 滑鼠移入時暫停，方便看清楚 logo */
+.logo-marquee:hover .logo-marquee__track {
+  animation-play-state: paused;
+}
+
+/* 內容為兩份相同序列，位移 50% 剛好接續，達成無縫循環 */
+@keyframes marquee-rtl {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marquee-ltr {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee .logo-marquee__track {
+    animation: none !important;
+  }
+}
+
+/* 緊接 logo 牆的色塊不要負疊 */
+.logo-marquee + .slab { margin-top: 0; }
 
 /* ============ Section 7：AI 老師 ============ */
 .feature-figure { margin: 0; }
@@ -1143,7 +1212,9 @@ img { max-width: 100%; height: auto; display: block; }
 
   .event-card { flex-basis: 84%; }
 
-  .logo-wall { height: 180px; background-size: contain; background-repeat: no-repeat; background-color: #fff; }
+  .logo-marquee { gap: 20px; padding: 32px 0; }
+  .logo-marquee__track { gap: 36px; }
+  .logo-marquee__track img { height: 40px; }
 
   .feature-cards { grid-template-columns: 1fr; }
 
