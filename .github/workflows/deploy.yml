@@ -24,11 +24,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # repo 若部署在 https://<user>.github.io/<repo>/，請把 GHPAGES_BASE 設成 /<repo>/
-      # 使用自訂網域或 <user>.github.io 根目錄時，移除這個環境變數即可
+      # 本站使用自訂網域 rovo.titansoft.com.sg，服務於根目錄，因此 base 維持 '/'。
+      # 若改回 https://<user>.github.io/<repo>/ 部署，再把 GHPAGES_BASE 設成 /<repo>/。
       - run: npm run build
-        env:
-          GHPAGES_BASE: /${{ github.event.repository.name }}/
       # sitemap 的 lastmod 自動帶入部署當天日期
       - run: sed -i "s|<lastmod>.*</lastmod>|<lastmod>$(TZ=Asia/Taipei date +%F)</lastmod>|" dist/sitemap.xml
       - uses: actions/upload-pages-artifact@v5
