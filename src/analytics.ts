@@ -34,7 +34,17 @@ function sectionName(section: HTMLElement, index: number): string {
   const heading = section.querySelector('.section-heading, h1, h2')
   const text = heading?.textContent?.trim()
   if (text) return text.replace(/\s+/g, ' ').slice(0, 60)
-  return `section-${index}`
+  return index >= 0 ? `section-${index}` : 'section'
+}
+
+// 取得元素所在 section 的名稱（給點擊追蹤用，不需 index）
+function sectionLabelOf(el: Element): string {
+  const section = el.closest('section')
+  return section ? sectionName(section as HTMLElement, -1) : ''
+}
+
+function text(el: Element | null | undefined, max = 60): string {
+  return (el?.textContent ?? '').replace(/\s+/g, ' ').trim().slice(0, max)
 }
 
 // ---------- section 曝光 + 停留時間 ----------
@@ -172,7 +182,78 @@ function attachVimeo(iframe: HTMLIFrameElement): void {
   })
 }
 
+// ---------- 按鈕 / 連結點擊 ----------
+// 用事件委派統一送 button_click，帶 button_name 讓報表能拆到每顆按鈕。
+function initClickTracking(): void {
+  document.addEventListener('click', (e) => {
+    const el = e.target as Element | null
+    if (!el) return
+
+    // 轉換型 CTA（所有 .btn：預約Demo、與我們聯絡、訂閱、聯絡我們、課程按鈕…）
+    const btn = el.closest<HTMLElement>('.btn')
+    if (btn) {
+      track('button_click', {
+        button_name: text(btn) || btn.getAttribute('aria-label') || 'button',
+        button_type: 'cta',
+        link_url: (btn as HTMLAnchorElement).href || '',
+        button_section: sectionLabelOf(btn),
+      })
+      return
+    }
+
+    // 活動卡片（用圖片 alt 當標題）
+    const card = el.closest<HTMLElement>('.event-card')
+    if (card) {
+      track('button_click', {
+        button_name: card.querySelector('img')?.getAttribute('alt')?.slice(0, 60) || 'event-card',
+        button_type: 'event_card',
+        link_url: (card as HTMLAnchorElement).href || '',
+        button_section: sectionLabelOf(card),
+      })
+      return
+    }
+
+    // FAQ：只在「展開」時送（main.ts 已先切換 aria-expanded）
+    const faq = el.closest<HTMLElement>('.faq-question')
+    if (faq) {
+      if (faq.getAttribute('aria-expanded') === 'true') {
+        track('button_click', {
+          button_name: text(faq, 80) || 'faq',
+          button_type: 'faq',
+          button_section: sectionLabelOf(faq),
+        })
+      }
+      return
+    }
+
+    // 提示詞分頁
+    const tab = el.closest<HTMLElement>('#promptTabs button')
+    if (tab) {
+      track('button_click', { button_name: text(tab) || 'tab', button_type: 'prompt_tab' })
+      return
+    }
+
+    // Agent 輪播（箭頭 / 縮圖）
+    const arrow = el.closest<HTMLElement>('.carousel-arrow')
+    if (arrow) {
+      track('button_click', {
+        button_name: arrow.classList.contains('next') ? 'carousel-next' : 'carousel-prev',
+        button_type: 'carousel',
+      })
+      return
+    }
+    const thumb = el.closest<HTMLElement>('.carousel-thumbs button')
+    if (thumb) {
+      track('button_click', {
+        button_name: thumb.getAttribute('aria-label') || 'carousel-thumb',
+        button_type: 'carousel',
+      })
+    }
+  })
+}
+
 export function initAnalytics(): void {
   initSectionTracking()
   initVimeoTracking()
+  initClickTracking()
 }

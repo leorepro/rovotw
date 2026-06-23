@@ -47,6 +47,7 @@ GA4 已透過 `index.html` 的 gtag 載入（評估 ID `G-417G3FE0Z1`），且�
 | `section_view` | 每個 `<section>` 首次進畫面 ≥50% | `section_name`、`section_index` |
 | `section_dwell` | 累計停留時間，於分頁隱藏/關閉時送出 | `section_name`、`dwell_seconds` |
 | `video_start` / `video_progress` / `video_complete` | 7 支 **Vimeo** 影片播放（25/50/75%、完成） | `video_title`、`video_provider`、`video_url`、`video_percent` |
+| `button_click` | 按鈕/連結點擊（CTA、活動卡片、FAQ 展開、提示詞分頁、Agent 輪播） | `button_name`、`button_type`、`link_url`、`button_section` |
 
 > Vimeo 事件的參數名稱刻意對齊 GA4 內建影片維度，因此 Vimeo 與 YouTube 會出現在同一張「影片標題」報表。
 > YouTube 影片、外連點擊、捲動深度由加強型評估負責，`analytics.ts` 不重複追蹤。
@@ -68,8 +69,11 @@ GA4 已透過 `index.html` 的 gtag 載入（評估 ID `G-417G3FE0Z1`），且�
 - **即時報表**（報表 → 即時）：不需 debug 模式，事件送出後即可看到，適合快速確認有沒有在送。
 - **看哪支影片被看**：探索（Explore）→ 自由格式 → 維度「影片標題 / 影片來源」、指標「事件計數」、
   篩選事件名稱 `video_start`。
-- **一次性設定**：管理 → 自訂定義 → 建立**自訂維度**（事件範圍）`section_name`（對應參數 `section_name`），
-  停留秒數建議另建**自訂指標** `dwell_seconds`。影片相關維度為 GA4 內建，免註冊。
+- **看哪顆按鈕被點**：探索 → 維度 `button_name`、指標「事件計數」、篩選事件名稱 `button_click`。
+  （外連 CTA 也會被加強型評估記成 `click`，但 `click` 無法區分「預約Demo / 聯絡我們」這種連到同一網址的不同按鈕，
+  `button_click` 才分得出來。）
+- **一次性設定**：管理 → 自訂定義 → 建立**自訂維度**（事件範圍）：`section_name`、`button_name`、`button_type`
+  （各對應同名參數），停留秒數建議另建**自訂指標** `dwell_seconds`。影片相關維度為 GA4 內建，免註冊。
   自訂維度約需 24–48 小時才回填報表，DebugView / 即時報表則可立即看到。
 
 設計細節見 `docs/superpowers/specs/2026-06-23-ga-event-tracking-design.md`。
