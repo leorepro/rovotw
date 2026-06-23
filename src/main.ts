@@ -1,5 +1,7 @@
 // 互動行為：FAQ 手風琴、Rovo Agent 輪播、活動卡片捲動指示點、表單（僅外觀）
 
+import { initAnalytics } from './analytics'
+
 // ---------- FAQ 手風琴 ----------
 function initFaq(): void {
   document.querySelectorAll<HTMLElement>('.faq-item').forEach((item) => {
@@ -237,3 +239,4 @@ initEventsDots()
 initSubscribe()
 initPromptTabs()
 initLogoMarquee()
+initAnalytics()
