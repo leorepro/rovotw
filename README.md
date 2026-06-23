@@ -63,8 +63,9 @@ GA4 已透過 `index.html` 的 gtag 載入（評估 ID `G-417G3FE0Z1`），且�
 
 ### GA4 後台確認與設定
 
-- **DebugView**（管理 → DebugView）：安裝「Google Analytics Debugger」Chrome 擴充並開啟後，
-  開正式站即可即時看到事件流。
+- **DebugView**（管理 → DebugView）：用 `?ga_debug=1` 開啟頁面即可（事件會帶 `debug_mode`，
+  自訂事件會即時出現在 DebugView）。或安裝「Google Analytics Debugger」Chrome 擴充並開啟。
+- **即時報表**（報表 → 即時）：不需 debug 模式，事件送出後即可看到，適合快速確認有沒有在送。
 - **看哪支影片被看**：探索（Explore）→ 自由格式 → 維度「影片標題 / 影片來源」、指標「事件計數」、
   篩選事件名稱 `video_start`。
 - **一次性設定**：管理 → 自訂定義 → 建立**自訂維度**（事件範圍）`section_name`（對應參數 `section_name`），
