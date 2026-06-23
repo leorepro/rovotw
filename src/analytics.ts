@@ -24,7 +24,8 @@ const DEBUG =
 function track(name: string, params: Record<string, unknown>): void {
   if (DEBUG) console.log(`%c[GA] ${name}`, 'color:#1a73e8;font-weight:bold', params)
   if (typeof window.gtag !== 'function') return
-  window.gtag('event', name, params)
+  // DEBUG 時附帶 debug_mode，讓事件出現在 GA4 DebugView
+  window.gtag('event', name, DEBUG ? { ...params, debug_mode: true } : params)
 }
 
 // 取得 section 的可辨識名稱：id > 標題文字 > section-{index}
