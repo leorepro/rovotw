@@ -1,6 +1,8 @@
 // 互動行為：FAQ 手風琴、Rovo Agent 輪播、活動卡片捲動指示點、表單（僅外觀）
 
 import { initAnalytics } from './analytics'
+import { initI18n, t } from './i18n'
+import { initSwitcher } from './i18n/switcher'
 
 // ---------- FAQ 手風琴 ----------
 function initFaq(): void {
@@ -100,7 +102,7 @@ function initSubscribe(): void {
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
     if (!MAILERLITE_FORM_ACTION) {
-      show('訂閱功能即將開放，敬請期待！', true)
+      show(t('subscribe.status.comingSoon', '訂閱功能即將開放，敬請期待！'), true)
       return
     }
     const btn = form.querySelector('button')!
@@ -112,13 +114,13 @@ function initSubscribe(): void {
       })
       const data = await res.json()
       if (data.success) {
-        show('✓ 已收到您的訂閱，請至信箱點擊確認信完成訂閱！', true)
+        show(t('subscribe.status.success', '✓ 已收到您的訂閱，請至信箱點擊確認信完成訂閱！'), true)
         form.reset()
       } else {
-        show('訂閱失敗，請確認電子郵件格式後再試一次。', false)
+        show(t('subscribe.status.invalid', '訂閱失敗，請確認電子郵件格式後再試一次。'), false)
       }
     } catch {
-      show('連線發生問題，請稍後再試。', false)
+      show(t('subscribe.status.error', '連線發生問題，請稍後再試。'), false)
     } finally {
       btn.disabled = false
     }
@@ -240,3 +242,6 @@ initSubscribe()
 initPromptTabs()
 initLogoMarquee()
 initAnalytics()
+
+// 多語系：依優先序（?lang= > localStorage > 瀏覽器語言 > 繁中）套用語言，並啟用切換 UI
+void initI18n().then((locale) => initSwitcher(locale))
