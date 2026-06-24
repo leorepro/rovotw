@@ -1236,8 +1236,9 @@ img { max-width: 100%; height: auto; display: block; }
    RWD
    ============================================================ */
 @media (max-width: 1023px) {
+  .nav-inner { gap: 12px; }
   .nav-links { display: none; }
-  .nav-toggle { display: block; margin-left: 8px; }
+  .nav-toggle { display: block; margin-left: 4px; }
   .nav-cta { display: none; }
   /* 語言切換在手機版仍顯示，靠右排在漢堡選單前 */
   .lang-switch { margin-left: auto; }
@@ -1280,6 +1281,11 @@ img { max-width: 100%; height: auto; display: block; }
   .logo-marquee__track img { height: 40px; }
 
   .feature-cards { grid-template-columns: 1fr; }
+  .secure-cards { grid-template-columns: 1fr; }
+
+  /* 手機版語言鈕只留地球圖示，避免長語言名（如 Tiếng Việt）擠爆導覽列 */
+  .lang-switch__current { display: none; }
+  .lang-switch__btn { padding: 8px; gap: 0; }
 
   .subscribe-form { flex-direction: column; }
   .subscribe-form .btn { width: 100%; }
