@@ -22,19 +22,31 @@ const DEBUG =
   new URLSearchParams(location.search).has('ga_debug')
 
 function track(name: string, params: Record<string, unknown>): void {
-  if (DEBUG) console.log(`%c[GA] ${name}`, 'color:#1a73e8;font-weight:bold', params)
+  // 每個事件都帶上目前語言，方便在 GA4 依語言分群（名稱維持語言無關的穩定值）
+  const enriched = { language: document.documentElement.lang || 'zh-TW', ...params }
+  if (DEBUG) console.log(`%c[GA] ${name}`, 'color:#1a73e8;font-weight:bold', enriched)
   if (typeof window.gtag !== 'function') return
   // DEBUG 時附帶 debug_mode，讓事件出現在 GA4 DebugView
-  window.gtag('event', name, DEBUG ? { ...params, debug_mode: true } : params)
+  window.gtag('event', name, DEBUG ? { ...enriched, debug_mode: true } : enriched)
 }
 
-// 取得 section 的可辨識名稱：id > 標題文字 > section-{index}
+// 取得 section 的可辨識名稱：id > 標題的 i18n key（語言無關）> 標題文字 > section-{index}
+// 用 i18n key 而非標題文字，避免切換語言後同一區塊在 GA 報表被拆成多筆。
 function sectionName(section: HTMLElement, index: number): string {
   if (section.id) return section.id
   const heading = section.querySelector('.section-heading, h1, h2')
+  const key = heading?.getAttribute('data-i18n')
+  if (key) return key
   const text = heading?.textContent?.trim()
   if (text) return text.replace(/\s+/g, ' ').slice(0, 60)
   return index >= 0 ? `section-${index}` : 'section'
+}
+
+// 元素的語言無關名稱：自身或子層的 data-i18n key 優先，否則退回可見文字
+function stableName(el: Element, max = 60): string {
+  const keyed = el.matches('[data-i18n]') ? el : el.querySelector('[data-i18n]')
+  const key = keyed?.getAttribute('data-i18n')
+  return key ?? text(el, max)
 }
 
 // 取得元素所在 section 的名稱（給點擊追蹤用，不需 index）
@@ -193,7 +205,7 @@ function initClickTracking(): void {
     const btn = el.closest<HTMLElement>('.btn')
     if (btn) {
       track('button_click', {
-        button_name: text(btn) || btn.getAttribute('aria-label') || 'button',
+        button_name: stableName(btn) || btn.getAttribute('aria-label') || 'button',
         button_type: 'cta',
         link_url: (btn as HTMLAnchorElement).href || '',
         button_section: sectionLabelOf(btn),
@@ -218,7 +230,7 @@ function initClickTracking(): void {
     if (faq) {
       if (faq.getAttribute('aria-expanded') === 'true') {
         track('button_click', {
-          button_name: text(faq, 80) || 'faq',
+          button_name: stableName(faq, 80) || 'faq',
           button_type: 'faq',
           button_section: sectionLabelOf(faq),
         })
@@ -229,7 +241,7 @@ function initClickTracking(): void {
     // 提示詞分頁
     const tab = el.closest<HTMLElement>('#promptTabs button')
     if (tab) {
-      track('button_click', { button_name: text(tab) || 'tab', button_type: 'prompt_tab' })
+      track('button_click', { button_name: stableName(tab) || 'tab', button_type: 'prompt_tab' })
       return
     }
 
@@ -252,8 +264,18 @@ function initClickTracking(): void {
   })
 }
 
+// ---------- 語言切換 ----------
+// i18n 引擎在切換語言時會發出 i18n:change 事件，這裡轉成 GA 的 language_switch。
+function initLanguageTracking(): void {
+  document.addEventListener('i18n:change', (e) => {
+    const detail = (e as CustomEvent<{ from: string; to: string }>).detail
+    track('language_switch', { from_language: detail.from, to_language: detail.to })
+  })
+}
+
 export function initAnalytics(): void {
   initSectionTracking()
   initVimeoTracking()
   initClickTracking()
+  initLanguageTracking()
 }

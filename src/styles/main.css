@@ -240,6 +240,64 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 6px;
 }
 
+/* 語言切換下拉 */
+.lang-switch { position: relative; flex-shrink: 0; }
+.lang-switch__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease;
+}
+.lang-switch__btn:hover { border-color: var(--blue); color: var(--blue); }
+.lang-switch__globe, .lang-switch__chev { flex-shrink: 0; }
+.lang-switch__current { white-space: nowrap; }
+.lang-switch__chev { transition: transform .2s ease; }
+.lang-switch__btn[aria-expanded="true"] .lang-switch__chev { transform: rotate(180deg); }
+.lang-switch__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 168px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  z-index: 60;
+}
+.lang-switch__menu[hidden] { display: none; }
+.lang-switch__menu li { margin: 0; }
+.lang-switch__menu button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 9px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.lang-switch__menu button:hover { background: var(--gray-bg); }
+.lang-switch__menu button.is-active { color: var(--blue); font-weight: 700; }
+.lang-switch__menu button.is-active::after { content: '✓'; font-size: 14px; }
+
 /* Hero（置中式） */
 .hero { padding: 72px 0 0; }
 .events { padding-top: 48px; }
@@ -1179,8 +1237,11 @@ img { max-width: 100%; height: auto; display: block; }
    ============================================================ */
 @media (max-width: 1023px) {
   .nav-links { display: none; }
-  .nav-toggle { display: block; margin-left: auto; }
+  .nav-toggle { display: block; margin-left: 8px; }
   .nav-cta { display: none; }
+  /* 語言切換在手機版仍顯示，靠右排在漢堡選單前 */
+  .lang-switch { margin-left: auto; }
+  .lang-switch__btn { padding: 7px 10px; }
   .site-nav.open .nav-links {
     display: flex;
     flex-direction: column;
